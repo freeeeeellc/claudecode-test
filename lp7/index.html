@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ハウスクリーニングのクリアベル｜満足度95%・仕上がり保証つきの宅配型クリーニング</title>
+<meta name="description" content="満足度95%※。仕上がり保証・無料再対応つきのハウスクリーニング。Before/After事例多数。東京・埼玉・神奈川・千葉対応。">
+<!-- lp7：カジタク（イオングループ）型（安心感×B/A事例×満足度×比較×保証）。数値はダミー -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#1b67b3;--blue-deep:#114a85;--blue-pale:#eaf3fb;
+  --orange:#f5821f;--orange-dark:#d96c0d;--pink:#e8508d;
+  --text:#333f4d;--gray:#68768a;--line:#dfe8f0;--bg:#f7fafc;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:78px}
+body{font-family:"Noto Sans JP",sans-serif;color:var(--text);background:#fff;font-size:16px;line-height:1.85}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+.inner{max-width:1060px;margin:0 auto;padding:0 18px}
+section{padding:62px 0}
+.sec-title{text-align:center;font-size:clamp(24px,3.8vw,33px);font-weight:900;line-height:1.5;margin-bottom:10px}
+.sec-title .b{color:var(--blue)}
+.sec-sub{text-align:center;color:var(--gray);font-size:15px;margin-bottom:38px}
+.btn{display:inline-block;font-weight:900;text-align:center;border-radius:999px;transition:transform .15s,opacity .15s}
+.btn:hover{transform:translateY(-2px);opacity:.92}
+.btn-orange{background:var(--orange);color:#fff;padding:16px 38px;font-size:17px;box-shadow:0 4px 0 var(--orange-dark)}
+.btn-blue{background:var(--blue);color:#fff;padding:13px 28px;font-size:15px;box-shadow:0 4px 0 var(--blue-deep)}
+/* グループ帯 */
+.group-band{background:var(--blue-deep);color:#fff;text-align:center;font-size:12.5px;font-weight:700;padding:6px 10px;letter-spacing:.06em}
+/* header */
+header{position:sticky;top:0;z-index:100;background:#fff;box-shadow:0 2px 10px rgba(17,74,133,.1)}
+.header-in{max-width:1100px;margin:0 auto;padding:10px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.logo{font-weight:900;font-size:22px;color:var(--blue)}
+.logo small{display:block;font-size:10px;color:var(--gray);font-weight:700;letter-spacing:.12em}
+.header-cta{display:flex;align-items:center;gap:12px}
+/* hero */
+.hero{background:linear-gradient(150deg,var(--blue-pale),#fff 60%,var(--blue-pale));padding:56px 0 48px;position:relative;overflow:hidden}
+.hero::before,.hero::after{content:"";position:absolute;border-radius:50%;background:radial-gradient(circle,rgba(27,103,179,.12),transparent 70%)}
+.hero::before{width:380px;height:380px;left:-120px;top:-120px}
+.hero::after{width:460px;height:460px;right:-140px;bottom:-180px}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;position:relative}
+.hero .badge-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px}
+.hero .badge-row span{background:#fff;border:2px solid var(--blue);color:var(--blue);font-size:13px;font-weight:900;border-radius:999px;padding:4px 16px}
+.hero h1{font-size:clamp(28px,4.8vw,44px);font-weight:900;line-height:1.5;margin-bottom:14px}
+.hero h1 .b{color:var(--blue)}
+.hero h1 .o{color:var(--orange)}
+.hero .lead{color:var(--gray);font-size:clamp(14px,2vw,17px);margin-bottom:24px}
+.hero .satisfaction{display:flex;align-items:center;gap:14px;margin-bottom:26px}
+.hero .sat-circle{width:120px;height:120px;border-radius:50%;background:var(--blue);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1.25;flex-shrink:0}
+.hero .sat-circle .l{font-size:12px;font-weight:700}
+.hero .sat-circle .v{font-size:34px;font-weight:900}
+.hero .sat-circle .v small{font-size:.5em}
+.hero .sat-text{font-size:13.5px;color:var(--gray)}
+.hero-photo img{border-radius:18px;aspect-ratio:4/3;object-fit:cover;width:100%;box-shadow:0 14px 36px rgba(17,74,133,.18)}
+.hero-cta-row{display:flex;gap:14px;flex-wrap:wrap}
+/* 申込み導線2種 */
+.entry{padding:34px 0;background:#fff}
+.entry-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.entry-card{display:flex;align-items:center;justify-content:space-between;gap:12px;border:2px solid var(--line);border-radius:14px;padding:20px 24px;background:var(--bg)}
+.entry-card:hover{border-color:var(--blue)}
+.entry-card h3{font-size:17px;font-weight:900}
+.entry-card p{font-size:13px;color:var(--gray)}
+.entry-card .arrow{color:var(--blue);font-weight:900;font-size:20px}
+/* サービス */
+.svc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.svc{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff;text-align:center;transition:box-shadow .2s}
+.svc:hover{box-shadow:0 8px 20px rgba(17,74,133,.12)}
+.svc img{aspect-ratio:16/10;object-fit:cover;width:100%}
+.svc h3{font-size:15.5px;font-weight:900;padding:12px 10px 0}
+.svc .pr{font-size:13px;color:var(--gray);padding:0 10px 14px}
+.svc .pr b{color:var(--orange);font-size:24px;font-weight:900}
+/* B/A */
+.ba-sec{background:var(--bg)}
+.ba-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.ba{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 3px 12px rgba(17,74,133,.08)}
+.ba-imgs{display:grid;grid-template-columns:1fr 1fr;position:relative}
+.ba-imgs::after{content:"→";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:var(--orange);color:#fff;width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:14px}
+.ba-imgs figure{position:relative;margin:0}
+.ba-imgs img{aspect-ratio:1;object-fit:cover;width:100%}
+.ba-imgs .before img{filter:grayscale(.9) brightness(.62)}
+.ba-imgs figcaption{position:absolute;left:8px;bottom:8px;background:rgba(51,63,77,.8);color:#fff;font-size:11px;font-weight:900;border-radius:4px;padding:2px 8px}
+.ba-imgs .after figcaption{background:var(--blue)}
+.ba h3{font-size:15.5px;font-weight:900;padding:14px 16px 4px}
+.ba p{font-size:13px;color:var(--gray);padding:0 16px 16px}
+/* 比較表 */
+.cmp-table{width:100%;border-collapse:collapse;font-size:14.5px;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 3px 14px rgba(17,74,133,.08)}
+.cmp-table th,.cmp-table td{border:1px solid var(--line);padding:16px 10px;text-align:center}
+.cmp-table thead th{background:var(--blue-deep);color:#fff}
+.cmp-table thead th.ours{background:var(--orange);font-size:16px}
+.cmp-table tbody th{background:var(--blue-pale);font-weight:900;width:22%}
+.cmp-table td.ours{background:#fff6ec;font-weight:900;color:var(--orange-dark)}
+.good{color:var(--orange);font-weight:900;font-size:20px;display:block}
+.mid{color:var(--gray);font-size:17px;display:block}
+/* 保証 */
+.guarantee{background:var(--blue);color:#fff;text-align:center;padding:54px 0}
+.guarantee h2{font-size:clamp(22px,3.6vw,32px);font-weight:900;margin-bottom:12px}
+.guarantee .g-row{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin:22px 0 8px}
+.guarantee .g-row span{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.5);border-radius:999px;padding:10px 26px;font-weight:900;font-size:15px}
+.guarantee p.note{font-size:12px;opacity:.8}
+/* 流れ・FAQ */
+.flow-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.flow-step{background:#fff;border:2px solid var(--line);border-radius:14px;padding:24px 16px;text-align:center}
+.flow-step .no{width:40px;height:40px;border-radius:50%;background:var(--blue);color:#fff;font-weight:900;display:flex;align-items:center;justify-content:center;margin:0 auto 10px}
+.flow-step h3{font-size:16px;font-weight:900;margin-bottom:6px}
+.flow-step p{font-size:13px;color:var(--gray)}
+.faq-list{max-width:780px;margin:0 auto}
+.faq-item{background:#fff;border:1px solid var(--line);border-radius:12px;margin-bottom:12px;overflow:hidden}
+.faq-q{width:100%;background:none;border:none;text-align:left;padding:17px 46px 17px 48px;font-size:15.5px;font-weight:900;color:var(--text);cursor:pointer;position:relative;font-family:inherit;line-height:1.6}
+.faq-q::before{content:"Q";position:absolute;left:18px;top:15px;color:var(--blue);font-weight:900;font-size:18px}
+.faq-q::after{content:"+";position:absolute;right:18px;top:50%;transform:translateY(-50%);font-size:22px;color:var(--blue)}
+.faq-item.open .faq-q::after{content:"−"}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease}
+.faq-a p{padding:0 20px 18px 48px;font-size:14px;color:var(--gray);position:relative}
+.faq-a p::before{content:"A";position:absolute;left:18px;color:var(--orange);font-weight:900}
+/* 最終CTA */
+.final{background:linear-gradient(150deg,var(--blue-pale),#fff);text-align:center;padding:60px 0}
+.final h2{font-size:clamp(22px,3.6vw,32px);font-weight:900;line-height:1.6;margin-bottom:8px}
+.final .tel{font-size:clamp(32px,5.4vw,50px);font-weight:900;color:var(--blue)}
+.final .tel a{color:var(--blue)}
+.final .hours{font-size:14px;color:var(--gray);margin-bottom:24px}
+footer{background:var(--blue-deep);color:#fff;padding:26px 0 96px;font-size:13px}
+.footer-in{max-width:1060px;margin:0 auto;padding:0 18px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+footer nav{display:flex;gap:16px;flex-wrap:wrap}
+footer nav a{opacity:.85}
+.fixed-cta{position:fixed;bottom:0;left:0;right:0;z-index:99;background:rgba(255,255,255,.97);border-top:2px solid var(--blue);padding:9px 12px;display:flex;gap:10px;justify-content:center}
+.fixed-cta .btn{flex:1;max-width:300px;font-size:14px;padding:12px 8px}
+.fixed-cta .tel-b{border:2px solid var(--blue);color:var(--blue);background:#fff;box-shadow:none}
+@media(max-width:860px){
+  section{padding:46px 0}
+  .hero-grid{grid-template-columns:1fr}
+  .entry-grid{grid-template-columns:1fr}
+  .svc-grid{grid-template-columns:repeat(2,1fr)}
+  .ba-grid{grid-template-columns:1fr}
+  .flow-grid{grid-template-columns:repeat(2,1fr)}
+  .cmp-wrap{overflow-x:auto}
+  .cmp-table{min-width:640px}
+}
+</style>
+</head>
+<body>
+
+<p class="group-band">クリアベルは ◯◯グループ のハウスクリーニングサービスです（※グループ名はダミー）</p>
+<header>
+  <div class="header-in">
+    <div class="logo">クリアベル<small>安心のハウスクリーニング</small></div>
+    <div class="header-cta">
+      <a href="#contact" class="btn btn-blue" style="padding:11px 22px;font-size:14px">かんたん見積もり</a>
+      <a href="#contact" class="btn btn-orange" style="padding:11px 24px;font-size:14px">申込みはこちら</a>
+    </div>
+  </div>
+</header>
+
+<!-- FV：満足度×保証の安心訴求（カジタク型） -->
+<div class="hero">
+  <div class="inner">
+    <div class="hero-grid">
+      <div>
+        <div class="badge-row"><span>仕上がり満足保証</span><span>損害保険加入</span><span>全国対応品質</span></div>
+        <h1>家のキレイ、<br><span class="b">プロに任せて</span><span class="o">失敗しない。</span></h1>
+        <p class="lead">満足度95%※のプロ品質。万一仕上がりにご納得いただけなければ、無料でやり直します。</p>
+        <div class="satisfaction">
+          <div class="sat-circle"><span class="l">利用者満足度</span><span class="v">95<small>%</small></span><span class="l">※ダミー</span></div>
+          <p class="sat-text">※調査主体・期間・対象数を明記した実データに差し替えてください（景品表示法）。</p>
+        </div>
+        <div class="hero-cta-row">
+          <a href="#contact" class="btn btn-orange">いますぐ申込む</a>
+          <a href="#price" class="btn btn-blue">料金を見る</a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <img src="https://images.unsplash.com/photo-1595846519845-68e298c2edd8?auto=format&fit=crop&w=1000&q=80" alt="クリーニング後の明るいリビング">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 申込み導線2種 -->
+<div class="entry">
+  <div class="inner">
+    <div class="entry-grid">
+      <a href="#price" class="entry-card"><div><h3>📍 場所から探す</h3><p>エアコン・浴室・キッチンなど、きれいにしたい場所から選ぶ</p></div><span class="arrow">▶</span></a>
+      <a href="#contact" class="entry-card"><div><h3>📷 汚れ具合から相談する</h3><p>写真を送るだけ。プロが最適なプランをご提案します</p></div><span class="arrow">▶</span></a>
+    </div>
+  </div>
+</div>
+
+<!-- サービス一覧 -->
+<section id="price">
+  <div class="inner">
+    <h2 class="sec-title">サービス<span class="b">一覧</span></h2>
+    <p class="sec-sub">すべて税込・出張費込みの定額制。価格はダミーです。</p>
+    <div class="svc-grid">
+      <div class="svc"><img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=500&q=75" alt="エアコン"><h3>エアコン</h3><p class="pr"><b>12,100</b>円/台</p></div>
+      <div class="svc"><img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=500&q=75" alt="浴室"><h3>浴室</h3><p class="pr"><b>16,500</b>円</p></div>
+      <div class="svc"><img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=500&q=75" alt="キッチン"><h3>キッチン</h3><p class="pr"><b>17,600</b>円</p></div>
+      <div class="svc"><img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=500&q=75" alt="洗面・トイレ"><h3>洗面・トイレ</h3><p class="pr"><b>9,900</b>円〜</p></div>
+      <div class="svc"><img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=500&q=75" alt="水回りセット"><h3>水回り4点セット</h3><p class="pr"><b>41,800</b>円</p></div>
+      <div class="svc"><img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=500&q=75" alt="窓・サッシ"><h3>窓・サッシ</h3><p class="pr"><b>13,200</b>円</p></div>
+      <div class="svc"><img src="https://images.unsplash.com/photo-1595846519845-68e298c2edd8?auto=format&fit=crop&w=500&q=75" alt="フロア"><h3>フロアコーティング</h3><p class="pr"><b>24,200</b>円〜</p></div>
+      <div class="svc"><img src="https://images.unsplash.com/photo-1592928302636-c83cf1e1c887?auto=format&fit=crop&w=500&q=75" alt="空室"><h3>空室クリーニング</h3><p class="pr"><b>38,500</b>円〜</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Before/After -->
+<section class="ba-sec">
+  <div class="inner">
+    <h2 class="sec-title">プロの実力を<span class="b">Before / After</span>で</h2>
+    <p class="sec-sub">※写真はイメージです。実際の施工写真に差し替えてください。</p>
+    <div class="ba-grid">
+      <div class="ba"><div class="ba-imgs"><figure class="before"><img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=500&q=75" alt="キッチンBefore"><figcaption>BEFORE</figcaption></figure><figure class="after"><img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=500&q=75" alt="キッチンAfter"><figcaption>AFTER</figcaption></figure></div><h3>キッチンの油汚れ</h3><p>分解つけ置き洗浄で、固着した油も新品同様に。</p></div>
+      <div class="ba"><div class="ba-imgs"><figure class="before"><img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=500&q=75" alt="浴室Before"><figcaption>BEFORE</figcaption></figure><figure class="after"><img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=500&q=75" alt="浴室After"><figcaption>AFTER</figcaption></figure></div><h3>浴室の黒カビ・水垢</h3><p>エプロン内部の黒カビまで根こそぎ除去します。</p></div>
+      <div class="ba"><div class="ba-imgs"><figure class="before"><img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=500&q=75" alt="洗面Before"><figcaption>BEFORE</figcaption></figure><figure class="after"><img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=500&q=75" alt="洗面After"><figcaption>AFTER</figcaption></figure></div><h3>洗面台のくすみ</h3><p>水垢・石けんカスを除去して輝きを取り戻します。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 比較表 -->
+<section>
+  <div class="inner">
+    <h2 class="sec-title">他社との<span class="b">違い</span></h2>
+    <p class="sec-sub">「安さ」ではなく「失敗しない」で選ぶならクリアベルです。</p>
+    <div class="cmp-wrap">
+      <table class="cmp-table">
+        <thead><tr><th></th><th class="ours">クリアベル</th><th>格安個人業者</th><th>大手A社</th></tr></thead>
+        <tbody>
+          <tr><th>仕上がり保証</th><td class="ours"><span class="good">◎</span>無料再対応つき</td><td><span class="mid">△</span>業者による</td><td><span class="mid">○</span>条件つき</td></tr>
+          <tr><th>料金</th><td class="ours"><span class="good">◎</span>定額・追加なし</td><td><span class="mid">○</span>安いが変動あり</td><td><span class="mid">△</span>オプションで加算</td></tr>
+          <tr><th>損害保険</th><td class="ours"><span class="good">◎</span>加入済み</td><td><span class="mid">△</span>未加入も多い</td><td><span class="mid">○</span>加入</td></tr>
+          <tr><th>予約</th><td class="ours"><span class="good">◎</span>WEB24時間・最短翌日</td><td><span class="mid">○</span>直接交渉</td><td><span class="mid">△</span>繁忙期は待ち</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- 仕上がり保証 -->
+<section class="guarantee">
+  <div class="inner">
+    <h2>「仕上がり満足保証」で、失敗しない。</h2>
+    <p>万一ご納得いただけない仕上がりだった場合、作業後7日以内のご連絡で無料で再対応いたします。</p>
+    <div class="g-row"><span>✔ 無料再対応</span><span>✔ 損害賠償保険</span><span>✔ 作業前後の写真報告</span></div>
+    <p class="note">※保証の適用条件は利用規約をご確認ください。</p>
+  </div>
+</section>
+
+<!-- 流れ -->
+<section>
+  <div class="inner">
+    <h2 class="sec-title">ご利用の<span class="b">流れ</span></h2>
+    <p class="sec-sub">申込みからお支払いまで、ぜんぶオンラインで完結できます。</p>
+    <div class="flow-grid">
+      <div class="flow-step"><p class="no">1</p><h3>WEBで申込み</h3><p>場所と日時を選ぶだけ。写真見積もりもOK。</p></div>
+      <div class="flow-step"><p class="no">2</p><h3>前日確認</h3><p>担当スタッフから前日にご連絡します。</p></div>
+      <div class="flow-step"><p class="no">3</p><h3>当日の作業</h3><p>養生→洗浄→仕上げ確認まで丁寧に。</p></div>
+      <div class="flow-step"><p class="no">4</p><h3>確認・支払い</h3><p>仕上がり確認後に。カード・QR対応。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section style="background:var(--bg)">
+  <div class="inner">
+    <h2 class="sec-title">よくある<span class="b">ご質問</span></h2>
+    <p class="sec-sub"></p>
+    <div class="faq-list">
+      <div class="faq-item"><button class="faq-q">仕上がり保証はどんな内容ですか？</button><div class="faq-a"><p>作業後7日以内にご連絡いただければ、ご納得いただけない箇所を無料で再対応します。適用条件の詳細は利用規約をご確認ください。</p></div></div>
+      <div class="faq-item"><button class="faq-q">追加料金が発生することはありますか？</button><div class="faq-a"><p>ありません。事前見積もりの金額が、お支払いいただく金額のすべてです。</p></div></div>
+      <div class="faq-item"><button class="faq-q">在宅していないとダメですか？</button><div class="faq-a"><p>作業開始時と終了時のお立ち会いのみお願いしています。作業中の外出は可能です。</p></div></div>
+      <div class="faq-item"><button class="faq-q">支払い方法は？</button><div class="faq-a"><p>現金・クレジットカード・主要QRコード決済に対応しています。</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 最終CTA -->
+<section class="final" id="contact">
+  <div class="inner">
+    <h2>見積もりは無料。<br>仕上がり保証つきで、安心してお試しください。</h2>
+    <p class="tel"><a href="tel:0120000000">📞 0120-000-000</a></p>
+    <p class="hours">受付 9:00〜19:00（年中無休）／WEB申込みは24時間</p>
+    <a href="#" class="btn btn-orange">WEBで申込む（60秒）</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-in">
+    <div>クリアベル ハウスクリーニング © Clearbell Cleaning Service.<br><span style="opacity:.6;font-size:11px">写真：Unsplash／満足度・実績はダミー</span></div>
+    <nav><a href="#">会社概要</a><a href="#">特定商取引法に基づく表記</a><a href="#">プライバシーポリシー</a></nav>
+  </div>
+</footer>
+
+<div class="fixed-cta">
+  <a href="tel:0120000000" class="btn tel-b">📞 電話で相談</a>
+  <a href="#contact" class="btn btn-orange" style="box-shadow:none">WEBで申込む</a>
+</div>
+
+<script>
+document.addEventListener('click',function(e){
+  var btn=e.target.closest('.faq-q');if(!btn)return;
+  var item=btn.parentElement,ans=item.querySelector('.faq-a'),isOpen=item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(function(o){o.classList.remove('open');o.querySelector('.faq-a').style.maxHeight=null;});
+  if(!isOpen){item.classList.add('open');ans.style.maxHeight=ans.scrollHeight+'px';}
+});
+</script>
+</body>
+</html>
