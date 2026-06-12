@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>アールクリーニング（構成クローン・青ベース／テスト画像）</title>
+<title>フリークリーニング（構成クローン・青ベース／テスト画像）</title>
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -46,41 +46,59 @@ img{max-width:100%;display:block}
 .ph.logo{width:170px;aspect-ratio:170/44}
 
 /* ===== トップ告知バー ===== */
-.topbar{background:var(--ink);color:#fff;font-size:13px}
-.topbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;height:38px}
-.topbar a{color:#fff;opacity:.9}
-.topbar .links{display:flex;gap:18px}
+.topbar{background:var(--ink);color:#fff;font-size:12.5px}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;height:36px}
+.topbar .tagline{display:flex;align-items:center;gap:8px;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;opacity:.92}
+.topbar .tagline::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--yellow);flex:none}
+.topbar a{color:#fff;opacity:.82}
+.topbar a:hover{opacity:1}
+.topbar .links{display:flex;gap:18px;flex:none}
 
 /* ===== ヘッダー ===== */
-.header{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 2px 10px rgba(0,0,0,.04)}
-.header .wrap{display:flex;align-items:center;gap:20px;height:74px}
-.brand{display:flex;align-items:center;gap:12px}
-.brand .name{font-weight:900;font-size:18px;line-height:1.3}
-.brand .name small{display:block;font-size:11px;color:var(--gray);font-weight:500}
+.header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line);box-shadow:0 2px 14px rgba(10,40,80,.06)}
+.header .wrap{display:flex;align-items:center;gap:16px;height:72px}
+.brand{display:flex;align-items:center;gap:11px;min-width:0}
+.brand .logo-mark{width:42px;height:42px;flex:none;border-radius:13px;background:linear-gradient(135deg,var(--blue),#34a8ff);
+  display:flex;align-items:center;justify-content:center;box-shadow:0 5px 14px rgba(11,102,195,.34)}
+.brand .name{font-weight:900;font-size:19px;line-height:1.2;letter-spacing:.01em;white-space:nowrap}
+.brand .name small{display:block;font-size:10.5px;color:var(--gray);font-weight:500;letter-spacing:0}
 .header .spacer{flex:1}
-.header .tel{text-align:right;line-height:1.2}
-.header .tel .num{font-size:24px;font-weight:900;color:var(--blue)}
+.header .tel{text-align:right;line-height:1.15}
+.header .tel .num{font-size:25px;font-weight:900;color:var(--blue);letter-spacing:.01em}
 .header .tel small{font-size:11px;color:var(--gray)}
-.header .cta{background:var(--cta);color:#fff;font-weight:900;padding:12px 22px;border-radius:8px;font-size:15px;white-space:nowrap}
-.menu-btn{display:none;background:var(--blue);color:#fff;border:none;font-weight:900;font-size:14px;padding:10px 14px;border-radius:8px;cursor:pointer}
+.header .cta{background:var(--cta);color:#fff;font-weight:900;padding:13px 24px;border-radius:999px;font-size:15px;white-space:nowrap;
+  box-shadow:0 6px 16px rgba(255,122,0,.32);transition:transform .15s,box-shadow .15s}
+.header .cta:hover{transform:translateY(-1px);box-shadow:0 10px 22px rgba(255,122,0,.42)}
+.menu-btn{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px;flex:none}
+.menu-btn span{display:block;width:25px;height:2.5px;border-radius:2px;background:var(--blue);transition:.25s}
+.menu-btn.active span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+.menu-btn.active span:nth-child(2){opacity:0}
+.menu-btn.active span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
 
 /* ===== グローバルメニュー ===== */
-.gnav{background:var(--blue);position:sticky;top:74px;z-index:99}
-.gnav ul{list-style:none;display:flex;flex-wrap:wrap;max-width:1120px;margin:0 auto}
+.gnav{background:linear-gradient(180deg,var(--blue),var(--blue-dark));position:sticky;top:72px;z-index:99;box-shadow:0 3px 10px rgba(10,40,80,.12)}
+.gnav ul{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;max-width:1120px;margin:0 auto}
 .gnav>ul>li{position:relative}
-.gnav>ul>li>a{display:block;color:#fff;font-weight:700;font-size:13.5px;padding:13px 14px;border-left:1px solid rgba(255,255,255,.18);white-space:nowrap}
-.gnav>ul>li:last-child>a{border-right:1px solid rgba(255,255,255,.18)}
-.gnav>ul>li:hover>a{background:var(--blue-dark)}
-.gnav .badge>a{background:var(--yellow);color:var(--blue-dark);font-weight:900}
-.gnav .has-sub>a::after{content:"▾";margin-left:5px;font-size:10px;opacity:.85}
-.submenu{position:absolute;top:100%;left:0;min-width:220px;background:#fff;box-shadow:var(--shadow);border:1px solid var(--line);
+.gnav>ul>li>a{display:flex;align-items:center;color:#fff;font-weight:700;font-size:13.5px;padding:14px 16px;position:relative;white-space:nowrap;transition:background .15s}
+.gnav>ul>li>a::after{content:"";position:absolute;left:16px;right:16px;bottom:8px;height:2px;background:var(--yellow);transform:scaleX(0);transition:transform .2s}
+.gnav>ul>li:hover>a{background:rgba(255,255,255,.1)}
+.gnav>ul>li:hover>a::after{transform:scaleX(1)}
+.gnav .caret{margin-left:5px;font-size:9px;opacity:.85;transition:transform .2s}
+.gnav .has-sub:hover>a .caret{transform:rotate(180deg)}
+.gnav .badge>a{background:var(--yellow);color:var(--blue-dark);font-weight:900;border-radius:8px;margin:6px 8px;padding:8px 14px}
+.gnav .badge>a::after{display:none}
+.gnav .badge:hover>a{background:#ffe94d}
+.submenu{position:absolute;top:100%;left:0;min-width:230px;background:#fff;box-shadow:0 14px 34px rgba(10,40,80,.18);border-radius:0 0 12px 12px;overflow:hidden;
   display:none;flex-direction:column;padding:6px 0;z-index:120}
 .gnav .has-sub:hover .submenu{display:flex}
-.submenu a{color:var(--ink);font-size:13.5px;font-weight:500;padding:9px 18px}
-.submenu a:hover{background:var(--snow);color:var(--blue)}
+.submenu a{color:var(--ink);font-size:13.5px;font-weight:500;padding:10px 20px;transition:.12s;border-left:3px solid transparent}
+.submenu a:hover{background:var(--snow);color:var(--blue);border-left-color:var(--blue)}
 
 /* ===== ヒーロー ===== */
 .hero{background:linear-gradient(180deg,#eef5fc,#ffffff)}
+.hero-art{position:relative;width:100%;aspect-ratio:16/7;overflow:hidden}
+.hero-art svg{display:block;width:100%;height:100%}
+@media(max-width:920px){.hero-art{aspect-ratio:16/10}}
 .campaign-band{background:var(--blue);color:#fff;text-align:center;padding:14px 16px}
 .campaign-band b{color:var(--yellow);font-size:1.4em;font-weight:900}
 .trust{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;padding:18px 0 6px}
@@ -174,14 +192,26 @@ section.alt{background:var(--snow)}
 
 /* ===== レスポンシブ ===== */
 @media(max-width:920px){
+  .topbar .wrap{height:34px}
+  .topbar .tagline{font-size:11.5px}
+  .topbar .links{display:none}
+  .header .wrap{height:62px;gap:10px}
   .header .tel,.header .cta{display:none}
-  .menu-btn{display:inline-block}
-  .gnav{top:74px}
+  .menu-btn{display:flex}
+  .brand .logo-mark{width:38px;height:38px}
+  .brand .name{font-size:16px}
+  .brand .name small{font-size:9.5px}
+  .gnav{position:sticky;top:62px;max-height:calc(100vh - 62px);overflow-y:auto}
   .gnav ul{display:none;flex-direction:column}
   .gnav.open ul{display:flex}
-  .gnav>ul>li>a{border-left:none;border-bottom:1px solid rgba(255,255,255,.18)}
-  .submenu{position:static;box-shadow:none;border:none;background:rgba(0,0,0,.12);display:flex}
-  .gnav .has-sub>a::after{content:"＋"}
+  .gnav>ul>li{position:static;border-bottom:1px solid rgba(255,255,255,.14)}
+  .gnav>ul>li>a{padding:15px 22px;font-size:15px;justify-content:space-between}
+  .gnav>ul>li>a::after{display:none}
+  .gnav .caret{font-size:12px;opacity:1}
+  .gnav .badge>a{margin:10px 18px;justify-content:center;padding:13px}
+  .submenu{position:static;box-shadow:none;border-radius:0;background:rgba(0,0,0,.16);display:flex;padding:4px 0}
+  .submenu a{color:#eaf3ff;padding:12px 38px;border-left:none}
+  .submenu a:hover{background:rgba(255,255,255,.1);color:#fff;border-left:none}
   .vacant{grid-template-columns:1fr}
   .footer .cols{grid-template-columns:1fr}
   .sp-cta{display:flex}
@@ -195,7 +225,7 @@ section.alt{background:var(--snow)}
 <!-- ===== トップ告知バー ===== -->
 <div class="topbar">
   <div class="wrap">
-    <span>東京・神奈川・埼玉・千葉のエアコン掃除／ハウスクリーニング</span>
+    <span class="tagline">東京・神奈川・埼玉・千葉のエアコン掃除／ハウスクリーニング</span>
     <span class="links">
       <a href="#faq">よくある質問</a>
       <a href="#company">運営会社</a>
@@ -208,8 +238,13 @@ section.alt{background:var(--snow)}
 <header class="header">
   <div class="wrap">
     <a class="brand" href="#top">
-      <span class="ph logo" data-label="ロゴ"></span>
-      <span class="name">アールクリーニング<small>東京のエアコン掃除・ハウスクリーニング</small></span>
+      <span class="logo-mark">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2.5C12 2.5 5.5 9.6 5.5 14.7a6.5 6.5 0 0 0 13 0C18.5 9.6 12 2.5 12 2.5Z" fill="#fff"/>
+          <circle cx="9.6" cy="14.6" r="1.7" fill="#bfe3ff"/>
+        </svg>
+      </span>
+      <span class="name">フリークリーニング<small>東京のエアコン掃除・ハウスクリーニング</small></span>
     </a>
     <div class="spacer"></div>
     <div class="tel">
@@ -217,7 +252,7 @@ section.alt{background:var(--snow)}
       <small>受付 9:00〜18:00／年中無休</small>
     </div>
     <a class="cta" href="#contact">無料お見積り</a>
-    <button class="menu-btn" id="menuBtn">MENU</button>
+    <button class="menu-btn" id="menuBtn" aria-label="メニューを開く"><span></span><span></span><span></span></button>
   </div>
 </header>
 
@@ -226,14 +261,14 @@ section.alt{background:var(--snow)}
   <ul>
     <li><a href="#top">トップページ</a></li>
     <li class="has-sub">
-      <a href="#plans">エアコンクリーニング</a>
+      <a href="#plans">エアコンクリーニング<span class="caret">▾</span></a>
       <div class="submenu">
         <a href="#plans">エアコン（壁掛けタイプ）</a>
         <a href="#plans">埋め込み型エアコン</a>
       </div>
     </li>
     <li class="has-sub">
-      <a href="#plans">ハウスクリーニング</a>
+      <a href="#plans">ハウスクリーニング<span class="caret">▾</span></a>
       <div class="submenu">
         <a href="#plans">レンジフード</a>
         <a href="#plans">キッチン</a>
@@ -265,7 +300,124 @@ section.alt{background:var(--snow)}
 
 <!-- ===== ヒーロー ===== -->
 <section class="hero" id="top" style="padding:0">
-  <img class="img hero" src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1600&q=80" alt="清掃スタッフ">
+  <div class="hero-art">
+    <svg viewBox="0 0 1600 700" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="お掃除キャラクターのかわいいイラスト">
+      <defs>
+        <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#e7f4ff"/><stop offset="1" stop-color="#bfe3ff"/>
+        </linearGradient>
+        <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#eef8ff"/><stop offset="1" stop-color="#cfeaff"/>
+        </linearGradient>
+        <radialGradient id="bub" cx="0.35" cy="0.3" r="0.75">
+          <stop offset="0" stop-color="#ffffff" stop-opacity="0.95"/>
+          <stop offset="0.55" stop-color="#cdecff" stop-opacity="0.45"/>
+          <stop offset="1" stop-color="#9fd6ff" stop-opacity="0.22"/>
+        </radialGradient>
+        <linearGradient id="apron" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#eaf3ff"/>
+        </linearGradient>
+        <symbol id="spk" viewBox="-10 -10 20 20">
+          <path d="M0 -10 Q1.6 -1.6 10 0 Q1.6 1.6 0 10 Q-1.6 1.6 -10 0 Q-1.6 -1.6 0 -10 Z" fill="currentColor"/>
+        </symbol>
+      </defs>
+
+      <!-- 背景 -->
+      <rect width="1600" height="700" fill="url(#sky)"/>
+      <path d="M0 560 Q800 505 1600 560 L1600 700 L0 700 Z" fill="url(#floor)"/>
+
+      <!-- 雲 -->
+      <g fill="#ffffff" opacity="0.85">
+        <ellipse cx="250" cy="120" rx="82" ry="34"/><ellipse cx="312" cy="122" rx="58" ry="27"/>
+        <ellipse cx="1330" cy="105" rx="92" ry="36"/><ellipse cx="1402" cy="110" rx="55" ry="26"/>
+      </g>
+
+      <!-- かわいいお家 -->
+      <g transform="translate(1170 250)">
+        <rect x="0" y="120" width="300" height="200" rx="14" fill="#ffffff"/>
+        <path d="M-26 130 L150 8 L326 130 Z" fill="#ff9aa8"/>
+        <rect x="46" y="170" width="86" height="86" rx="10" fill="#bfe3ff" stroke="#9fd6ff" stroke-width="4"/>
+        <line x1="89" y1="170" x2="89" y2="256" stroke="#9fd6ff" stroke-width="4"/>
+        <line x1="46" y1="213" x2="132" y2="213" stroke="#9fd6ff" stroke-width="4"/>
+        <rect x="178" y="200" width="74" height="120" rx="10" fill="#ffd28a"/>
+        <circle cx="238" cy="262" r="5" fill="#b97f3a"/>
+        <!-- 窓のキラッ -->
+        <use href="#spk" x="96" y="178" width="36" height="36" color="#fff"/>
+      </g>
+
+      <!-- シャボン玉 -->
+      <g>
+        <circle cx="150" cy="430" r="46" fill="url(#bub)"/><circle cx="135" cy="415" r="11" fill="#fff" opacity="0.8"/>
+        <circle cx="300" cy="300" r="30" fill="url(#bub)"/><circle cx="291" cy="291" r="7" fill="#fff" opacity="0.8"/>
+        <circle cx="1050" cy="430" r="38" fill="url(#bub)"/><circle cx="1038" cy="418" r="9" fill="#fff" opacity="0.8"/>
+        <circle cx="980" cy="250" r="24" fill="url(#bub)"/><circle cx="973" cy="243" r="6" fill="#fff" opacity="0.8"/>
+        <circle cx="430" cy="180" r="22" fill="url(#bub)"/>
+      </g>
+
+      <!-- きらきら -->
+      <use href="#spk" x="360" y="360" width="54" height="54" color="#ffd400"/>
+      <use href="#spk" x="1010" y="160" width="40" height="40" color="#ffd400"/>
+      <use href="#spk" x="250" y="470" width="34" height="34" color="#fff"/>
+      <use href="#spk" x="1090" y="330" width="46" height="46" color="#fff"/>
+      <use href="#spk" x="540" y="120" width="30" height="30" color="#ffd400"/>
+
+      <!-- ===== チビキャラ（お掃除スタッフ） ===== -->
+      <g transform="translate(640 250)">
+        <!-- 影 -->
+        <ellipse cx="180" cy="318" rx="150" ry="26" fill="#5aa9ee" opacity="0.18"/>
+
+        <!-- 脚 -->
+        <rect x="120" y="250" width="40" height="70" rx="18" fill="#3a5d8f"/>
+        <rect x="200" y="250" width="40" height="70" rx="18" fill="#3a5d8f"/>
+        <ellipse cx="140" cy="322" rx="30" ry="14" fill="#ffffff"/>
+        <ellipse cx="220" cy="322" rx="30" ry="14" fill="#ffffff"/>
+
+        <!-- 体（エプロンワンピース） -->
+        <path d="M118 150 Q180 138 242 150 L262 270 Q180 292 98 270 Z" fill="#0b66c3"/>
+        <path d="M150 150 Q180 144 210 150 L222 268 Q180 280 138 268 Z" fill="url(#apron)"/>
+        <rect x="150" y="150" width="60" height="14" rx="7" fill="#ffffff" opacity="0.9"/>
+
+        <!-- 左腕（腰に） -->
+        <path d="M120 168 Q92 196 110 230" stroke="#ffe0c7" stroke-width="26" stroke-linecap="round" fill="none"/>
+        <circle cx="110" cy="232" r="17" fill="#ffd400"/>
+
+        <!-- 右腕（スプレーを持つ・上げる） -->
+        <path d="M240 168 Q298 156 320 120" stroke="#ffe0c7" stroke-width="26" stroke-linecap="round" fill="none"/>
+        <circle cx="322" cy="118" r="17" fill="#ffd400"/>
+
+        <!-- スプレーボトル -->
+        <g transform="translate(316 60) rotate(18)">
+          <rect x="-12" y="20" width="44" height="58" rx="10" fill="#74d0e2"/>
+          <rect x="-2" y="34" width="24" height="30" rx="5" fill="#ffffff" opacity="0.7"/>
+          <rect x="2" y="6" width="16" height="18" fill="#3a5d8f"/>
+          <path d="M18 8 L46 2 L46 14 L18 18 Z" fill="#3a5d8f"/>
+        </g>
+        <!-- ミスト -->
+        <g fill="#fff">
+          <circle cx="372" cy="56" r="6" opacity="0.9"/><circle cx="392" cy="44" r="4.5" opacity="0.8"/>
+          <circle cx="390" cy="70" r="4" opacity="0.8"/><circle cx="410" cy="58" r="3.5" opacity="0.7"/>
+        </g>
+
+        <!-- 頭 -->
+        <circle cx="180" cy="92" r="78" fill="#ffe0c7"/>
+        <!-- 髪 -->
+        <path d="M104 86 Q104 8 180 8 Q256 8 256 86 Q256 64 230 60 Q200 78 130 60 Q104 64 104 86 Z" fill="#6b4a3a"/>
+        <!-- バンダナ -->
+        <path d="M100 60 Q180 28 260 60 L256 84 Q180 56 104 84 Z" fill="#0b66c3"/>
+        <g fill="#fff"><circle cx="132" cy="64" r="4"/><circle cx="168" cy="56" r="4"/><circle cx="204" cy="56" r="4"/><circle cx="238" cy="64" r="4"/></g>
+        <path d="M252 58 q22 -10 30 6 q-18 -2 -26 10 Z" fill="#0b66c3"/>
+        <!-- 目 -->
+        <ellipse cx="150" cy="100" rx="13" ry="17" fill="#3a2a22"/>
+        <ellipse cx="210" cy="100" rx="13" ry="17" fill="#3a2a22"/>
+        <circle cx="146" cy="94" r="5" fill="#fff"/><circle cx="206" cy="94" r="5" fill="#fff"/>
+        <!-- ほっぺ -->
+        <circle cx="124" cy="120" r="13" fill="#ffb0b8" opacity="0.75"/>
+        <circle cx="236" cy="120" r="13" fill="#ffb0b8" opacity="0.75"/>
+        <!-- 口 -->
+        <path d="M168 124 Q180 138 192 124" stroke="#c8806a" stroke-width="5" fill="none" stroke-linecap="round"/>
+      </g>
+    </svg>
+  </div>
   <div class="campaign-band">
     期間限定キャンペーン　最大 <b>69% OFF</b>　／　◯月◯日まで・1,500件突破記念
   </div>
@@ -602,7 +754,7 @@ section.alt{background:var(--snow)}
     <div class="cols">
       <div>
         <span class="ph logo" data-label="ロゴ" style="margin-bottom:14px"></span>
-        <h4>アールクリーニング</h4>
+        <h4>フリークリーニング</h4>
         <p style="font-size:13px">東京のエアコン掃除・ハウスクリーニング<br>運営会社情報（あとで差し替え）</p>
         <div class="socials">
           <span class="ph" data-label="IG"></span>
@@ -629,7 +781,7 @@ section.alt{background:var(--snow)}
       </div>
     </div>
   </div>
-  <div class="copyright">©2026 【アールクリーニング】東京のエアコン掃除・ハウスクリーニング（構成クローン・青ベース／テスト画像）</div>
+  <div class="copyright">©2026 【フリークリーニング】東京のエアコン掃除・ハウスクリーニング（構成クローン・青ベース／テスト画像）</div>
 </footer>
 
 <a class="pagetop" href="#top">▲</a>
@@ -644,8 +796,16 @@ section.alt{background:var(--snow)}
 <div id="faq"></div>
 
 <script>
-  document.getElementById('menuBtn').addEventListener('click',function(){
-    document.getElementById('gnav').classList.toggle('open');
+  var mb=document.getElementById('menuBtn'),gn=document.getElementById('gnav');
+  mb.addEventListener('click',function(){
+    gn.classList.toggle('open');
+    mb.classList.toggle('active');
+  });
+  // モバイル：メニュー内リンクをタップしたら閉じる
+  gn.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click',function(){
+      if(window.innerWidth<=920){gn.classList.remove('open');mb.classList.remove('active');}
+    });
   });
 </script>
 </body>
