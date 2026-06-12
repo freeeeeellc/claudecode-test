@@ -107,4 +107,4 @@
 
 ## 8. 公開
 
-- GitHub リポジトリ：`claudecode-test`（GitHub Pages, main / root）
+- GitHub リポジトリ：`cleaning-test`（GitHub Pages, main / root）
