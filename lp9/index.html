@@ -180,8 +180,17 @@ section.alt{background:var(--snow)}
 .footer .socials{display:flex;gap:12px;margin-top:14px}
 .footer .socials .ph{width:38px;height:38px;border-radius:50%;font-size:9px}
 .copyright{text-align:center;padding:18px;font-size:12px;color:#8a96a3}
-.pagetop{position:fixed;right:18px;bottom:90px;background:var(--blue);color:#fff;width:46px;height:46px;border-radius:8px;
-  display:flex;align-items:center;justify-content:center;font-weight:900;z-index:90;box-shadow:var(--shadow)}
+.pagetop{position:fixed;right:20px;bottom:160px;background:var(--blue);color:#fff;width:46px;height:46px;border-radius:12px;
+  display:flex;align-items:center;justify-content:center;font-weight:900;z-index:90;box-shadow:0 8px 20px rgba(10,40,80,.22)}
+
+/* ===== PC：右下フローティングCTA ===== */
+.float-cta{position:fixed;right:20px;bottom:20px;z-index:96;display:flex;flex-direction:column;gap:10px}
+.float-cta a{display:flex;align-items:center;gap:9px;padding:14px 22px;border-radius:999px;font-weight:900;font-size:15px;
+  box-shadow:0 8px 22px rgba(10,40,80,.22);transition:transform .15s,box-shadow .15s}
+.float-cta a svg{width:18px;height:18px;flex:none}
+.float-cta a:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(10,40,80,.3)}
+.float-cta .tel{background:#fff;color:var(--blue);border:2px solid var(--blue)}
+.float-cta .est{background:var(--cta);color:#fff}
 
 /* ===== SP固定CTAバー ===== */
 .sp-cta{display:none;position:fixed;bottom:0;left:0;right:0;z-index:95;background:#fff;border-top:1px solid var(--line);
@@ -215,7 +224,8 @@ section.alt{background:var(--snow)}
   .vacant{grid-template-columns:1fr}
   .footer .cols{grid-template-columns:1fr}
   .sp-cta{display:flex}
-  .pagetop{bottom:80px}
+  .float-cta{display:none}
+  .pagetop{bottom:80px;right:18px}
   body{padding-bottom:64px}
 }
 </style>
@@ -779,6 +789,18 @@ section.alt{background:var(--snow)}
 </footer>
 
 <a class="pagetop" href="#top">▲</a>
+
+<!-- ===== PC：右下フローティングCTA ===== -->
+<div class="float-cta">
+  <a class="tel" href="tel:0120000000">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.3 1.1l-2.1 2.1Z"/></svg>
+    お電話
+  </a>
+  <a class="est" href="#contact">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 3h7l5 5v12a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Zm6 1.5V8h3.5L13 4.5ZM9 12h7v1.6H9V12Zm0 3.2h7v1.6H9v-1.6Z"/></svg>
+    無料見積り
+  </a>
+</div>
 
 <!-- ===== SP固定CTAバー ===== -->
 <div class="sp-cta">
