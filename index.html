@@ -110,10 +110,10 @@ header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);backdr
         <h1>見えない汚れまで、<br><span class="accent">分解洗浄</span>のプロが落とす。<br><span class="underline">追加料金は、0円。</span></h1>
         <p class="hero-sub">お見積もり金額＝お支払い金額。作業当日の上乗せ請求は一切ありません。出張費・駐車費・土日祝料金もすべて込みです。</p>
         <div class="hero-chips">
-          <div class="chip">施工実績 <b>◯万件</b>※</div>
-          <div class="chip">満足度 <b>97.◯%</b>※</div>
+          <div class="chip">作業実績 <b>◯◯万件</b>※</div>
+          <div class="chip">口コミ評価 <b>★4.◯</b>※</div>
+          <div class="chip">口コミ <b>◯,◯◯◯件</b>突破※</div>
           <div class="chip">損害保険 加入</div>
-          <div class="chip">再仕上げ保証 7日間</div>
         </div>
         <a href="#contact" class="btn btn-cta">60秒で完了｜無料見積もりはこちら</a>
         <p class="hero-note">※数値は公開前に実数へ差し替えてください（景品表示法対応）</p>
@@ -128,8 +128,8 @@ header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);backdr
 
 <!-- §6-2 キャンペーン帯 -->
 <div class="campaign">
-  ＼ 初回限定 ／ エアコンクリーニング2台目以降<b>半額</b>＋防カビ抗菌コート<b>無料</b>
-  <small>キャンペーンは ◯月◯日 まで（日程・内容は差し替えてください）</small>
+  ＼ 期間限定の感謝価格 ／ 全メニュー<b>最大58%OFF</b>＋エアコン2台目以降<b>半額</b>
+  <small>◯月◯日まで（日程・割引率は実績ある通常価格に基づいて差し替えてください）</small>
 </div>
 
 <style>
@@ -161,14 +161,16 @@ header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);backdr
 .ba-item h3{font-size:20px;font-weight:700;padding:22px 24px 6px}
 .ba-item p{font-size:15.5px;color:var(--gray);padding:0 24px 26px}
 
-/* ===== §6-6 料金 ===== */
+/* ===== §6-6 料金（二重価格＋OFFバッジ） ===== */
 .price-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
-.price-card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:34px 24px;text-align:center;transition:box-shadow .2s,transform .2s}
+.price-card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:30px 20px 28px;text-align:center;transition:box-shadow .2s,transform .2s;position:relative}
 .price-card:hover{box-shadow:var(--shadow);transform:translateY(-4px)}
-.price-card .icon{font-size:44px;line-height:1;margin-bottom:18px}
-.price-card h3{font-size:18px;font-weight:700;line-height:1.5;margin-bottom:10px}
-.price-card .price{font-size:15px;color:var(--gray)}
-.price-card .price b{color:var(--ink);font-size:30px;font-weight:900}
+.price-card .off{position:absolute;top:-12px;right:14px;background:var(--cta);color:#fff;font-size:13px;font-weight:900;border-radius:999px;padding:4px 14px;letter-spacing:.04em}
+.price-card .icon{font-size:40px;line-height:1;margin-bottom:14px}
+.price-card h3{font-size:17px;font-weight:700;line-height:1.5;margin-bottom:8px}
+.price-card .old{font-size:14px;color:var(--gray);text-decoration:line-through;text-decoration-color:rgba(239,127,26,.7);text-decoration-thickness:2px}
+.price-card .price{font-size:15px;color:var(--gray);line-height:1.4}
+.price-card .price b{color:var(--cta);font-size:30px;font-weight:900}
 .price-note{text-align:center;font-size:14px;color:var(--gray);margin-top:34px}
 </style>
 
@@ -268,24 +270,27 @@ header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);backdr
     <h2 class="sec-title">わかりやすい<em>固定料金</em></h2>
     <p class="sec-lead">表示はすべて税込・諸費用込み。ここから増えることはありません。</p>
     <div class="price-grid">
-      <div class="price-card reveal"><div class="icon">❄️</div><h3>エアコン</h3><p class="price"><b>9,800</b>円〜／台</p></div>
-      <div class="price-card reveal"><div class="icon">✨</div><h3>お掃除機能付き<br>エアコン</h3><p class="price"><b>16,500</b>円〜／台</p></div>
-      <div class="price-card reveal"><div class="icon">♨️</div><h3>レンジフード・換気扇</h3><p class="price"><b>13,200</b>円〜</p></div>
-      <div class="price-card reveal"><div class="icon">🍳</div><h3>キッチンまわり一式</h3><p class="price"><b>14,300</b>円〜</p></div>
-      <div class="price-card reveal"><div class="icon">🛁</div><h3>浴室</h3><p class="price"><b>13,200</b>円〜</p></div>
-      <div class="price-card reveal"><div class="icon">🚽</div><h3>トイレ</h3><p class="price"><b>8,800</b>円〜</p></div>
-      <div class="price-card reveal"><div class="icon">🚰</div><h3>洗面所</h3><p class="price"><b>7,700</b>円〜</p></div>
-      <div class="price-card reveal"><div class="icon">🪟</div><h3>窓ガラス・ベランダ</h3><p class="price"><b>9,900</b>円〜</p></div>
+      <div class="price-card reveal"><span class="off">50%OFF</span><div class="icon">❄️</div><h3>エアコン（壁掛け）</h3><p class="old">通常 19,800円</p><p class="price"><b>9,980</b>円／台</p></div>
+      <div class="price-card reveal"><span class="off">37%OFF</span><div class="icon">✨</div><h3>お掃除機能付き<br>エアコン</h3><p class="old">通常 29,700円</p><p class="price"><b>18,700</b>円／台</p></div>
+      <div class="price-card reveal"><span class="off">42%OFF</span><div class="icon">♨️</div><h3>レンジフード・換気扇</h3><p class="old">通常 28,600円</p><p class="price"><b>16,500</b>円</p></div>
+      <div class="price-card reveal"><span class="off">40%OFF</span><div class="icon">🍳</div><h3>キッチン</h3><p class="old">通常 29,700円</p><p class="price"><b>17,600</b>円</p></div>
+      <div class="price-card reveal"><span class="off">39%OFF</span><div class="icon">🛁</div><h3>浴室</h3><p class="old">通常 30,800円</p><p class="price"><b>18,700</b>円</p></div>
+      <div class="price-card reveal"><span class="off">58%OFF</span><div class="icon">🚽</div><h3>トイレ</h3><p class="old">通常 26,400円</p><p class="price"><b>11,000</b>円</p></div>
+      <div class="price-card reveal"><span class="off">58%OFF</span><div class="icon">🚰</div><h3>洗面台</h3><p class="old">通常 26,400円</p><p class="price"><b>11,000</b>円</p></div>
+      <div class="price-card reveal"><span class="off">40%OFF</span><div class="icon">🧹</div><h3>フロア・床洗浄</h3><p class="old">通常 38,500円〜</p><p class="price"><b>23,100</b>円〜</p></div>
+      <div class="price-card reveal"><span class="off">58%OFF</span><div class="icon">🪟</div><h3>窓・サッシ・雨戸</h3><p class="old">通常 28,600円</p><p class="price"><b>12,100</b>円</p></div>
+      <div class="price-card reveal"><span class="off">38%OFF</span><div class="icon">🌤</div><h3>ベランダ</h3><p class="old">通常 28,600円</p><p class="price"><b>17,600</b>円</p></div>
     </div>
-    <p class="price-note">※価格は仮置きです。実料金に差し替えてください。出張費・駐車費・週末料金はかかりません。</p>
+    <p class="price-note">※価格・割引率は仮置きです。二重価格表示は通常価格での販売実績が必要です（景品表示法・有利誤認）。実績に基づく実料金へ差し替えてください。<br>出張費・駐車費・週末料金はかかりません。1箇所からご依頼いただけます。</p>
   </div>
 </section>
 
 <style>
 /* ===== §6-7 セットプラン ===== */
 .plans{background:var(--snow)}
-.plan-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;align-items:stretch}
-.plan-card{background:var(--white);border-radius:var(--radius);padding:42px 30px;text-align:center;position:relative;display:flex;flex-direction:column;box-shadow:var(--shadow)}
+.plan-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;align-items:stretch}
+.plan-card{background:var(--white);border-radius:var(--radius);padding:38px 22px 30px;text-align:center;position:relative;display:flex;flex-direction:column;box-shadow:var(--shadow)}
+.plan-card .duration{display:inline-block;background:var(--ink);color:#fff;border-radius:8px;font-size:13px;font-weight:700;padding:3px 14px;margin:0 auto 12px}
 .plan-card.featured{border:3px solid var(--accent)}
 .plan-card .tag{position:absolute;top:-18px;left:50%;transform:translateX(-50%);background:var(--accent);color:#fff;font-size:14px;font-weight:900;border-radius:999px;padding:7px 24px;white-space:nowrap}
 .plan-card h3{font-size:23px;font-weight:900;margin-bottom:6px}
@@ -331,45 +336,85 @@ header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);backdr
 <!-- §6-7 セットプラン -->
 <section class="plans">
   <div class="inner">
-    <span class="sec-label">SET PLAN</span>
-    <h2 class="sec-title">まとめて頼むほどおトクな<br><em>水回りセットプラン</em></h2>
-    <p class="sec-lead">よく選ばれる組み合わせを、単品合計より安いセット価格でご用意しました。</p>
+    <span class="sec-label">PACK PLAN</span>
+    <h2 class="sec-title">場所を選べる<em>時間制パック</em>が断然おトク</h2>
+    <p class="sec-lead">時間内なら、キッチンも浴室もエアコンも組み合わせ自由。「どこを頼むか迷う」方はこちらが便利です。</p>
     <div class="plan-grid">
       <div class="plan-card reveal">
-        <h3>ライト</h3>
-        <p class="plan-sub">気になる2箇所をサクッと</p>
-        <p class="plan-price">水回り2箇所<b>24,200<small>円</small></b><span class="save">単品より 2,200円おトク</span></p>
+        <span class="duration">60分</span>
+        <h3>おためし<br>60分パック</h3>
+        <p class="plan-sub">まずは1箇所だけ試したい方に</p>
+        <p class="plan-price"><b>9,680<small>円</small></b></p>
         <ul>
-          <li>浴室・キッチン・トイレ・洗面所から2箇所</li>
-          <li>作業時間 約2〜3時間</li>
+          <li>スタッフ1名・60分作業</li>
+          <li>トイレ＋洗面など小箇所の組み合わせに</li>
           <li>作業前後の写真レポート付き</li>
         </ul>
-        <a href="#contact" class="btn btn-ghost">このプランで見積もる</a>
+        <a href="#contact" class="btn btn-ghost">このパックで見積もる</a>
+      </div>
+      <div class="plan-card reveal">
+        <span class="duration">3時間</span>
+        <h3>たっぷり<br>3時間パック</h3>
+        <p class="plan-sub">水回り2〜3箇所におすすめ</p>
+        <p class="plan-price"><b>26,400<small>円</small></b><span class="save">単品より最大 9,900円おトク</span></p>
+        <ul>
+          <li>スタッフ1名・3時間作業</li>
+          <li>浴室＋キッチンなど人気の組み合わせ</li>
+          <li>作業前後の写真レポート付き</li>
+        </ul>
+        <a href="#contact" class="btn btn-ghost">このパックで見積もる</a>
       </div>
       <div class="plan-card featured reveal">
         <span class="tag">＼ いちばん人気 ／</span>
-        <h3>スタンダード</h3>
+        <span class="duration">4時間</span>
+        <h3>しっかり<br>4時間パック</h3>
         <p class="plan-sub">水回りまるごとリセット</p>
-        <p class="plan-price">水回り4箇所<b>39,600<small>円</small></b><span class="save">単品より 4,400円おトク</span></p>
+        <p class="plan-price"><b>33,000<small>円</small></b><span class="save">単品より最大 14,300円おトク</span></p>
         <ul>
-          <li>浴室＋キッチン＋トイレ＋洗面所</li>
-          <li>作業時間 約4〜5時間</li>
+          <li>スタッフ1名・4時間作業</li>
+          <li>浴室＋キッチン＋トイレ＋洗面の定番</li>
           <li>排水口の防臭ケア付き</li>
-          <li>作業前後の写真レポート付き</li>
         </ul>
-        <a href="#contact" class="btn btn-cta">このプランで見積もる</a>
+        <a href="#contact" class="btn btn-cta">このパックで見積もる</a>
       </div>
       <div class="plan-card reveal">
-        <h3>プレミアム</h3>
-        <p class="plan-sub">引っ越し前後・大掃除に</p>
-        <p class="plan-price">水回り4箇所＋選べる2箇所<b>56,100<small>円</small></b><span class="save">単品より 7,700円おトク</span></p>
+        <span class="duration">6時間</span>
+        <h3>まるごと<br>6時間パック</h3>
+        <p class="plan-sub">引っ越し前後・年末の大掃除に</p>
+        <p class="plan-price"><b>49,500<small>円</small></b><span class="save">時間単価がいちばんおトク</span></p>
         <ul>
-          <li>水回り4箇所＋エアコン等から2箇所</li>
-          <li>作業時間 約6時間（2名体制）</li>
+          <li>スタッフ1名・6時間（2名3時間も可）</li>
+          <li>水回り全部＋エアコンまで対応</li>
           <li>防カビ抗菌コート1箇所無料</li>
-          <li>作業前後の写真レポート付き</li>
         </ul>
-        <a href="#contact" class="btn btn-ghost">このプランで見積もる</a>
+        <a href="#contact" class="btn btn-ghost">このパックで見積もる</a>
+      </div>
+    </div>
+    <p class="price-note">※パック料金・内容は仮置きです。実際のサービス設計に合わせて差し替えてください。</p>
+  </div>
+</section>
+
+<style>
+/* ===== 空室クリーニングバナー ===== */
+.vacant{padding:0}
+.vacant-banner{position:relative;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);background:url("https://images.unsplash.com/photo-1592928302636-c83cf1e1c887?auto=format&fit=crop&w=1400&q=80") center/cover no-repeat;min-height:280px;display:flex;align-items:center}
+.vacant-banner::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(27,39,53,.86) 0%,rgba(27,39,53,.55) 55%,rgba(27,39,53,.2) 100%)}
+.vacant-in{position:relative;color:#fff;padding:48px 56px;max-width:620px}
+.vacant-in .v-label{font-size:14px;font-weight:700;letter-spacing:.2em;color:#9fdbd7;margin-bottom:10px}
+.vacant-in h2{font-size:clamp(24px,3.4vw,34px);font-weight:900;line-height:1.5;margin-bottom:12px}
+.vacant-in p{font-size:16px;opacity:.92;margin-bottom:24px}
+@media(max-width:860px){.vacant-in{padding:36px 28px}}
+</style>
+
+<!-- 空室・退去クリーニング（元サイトの空室バナーに対応） -->
+<section class="vacant">
+  <div class="inner">
+    <div class="vacant-banner reveal">
+      <div class="vacant-in">
+        <p class="v-label">VACANT ROOM</p>
+        <h2>退去後・入居前の<br>空室クリーニングも承ります</h2>
+        <p>1R〜ファミリータイプまで間取り別の定額制。オーナー様・管理会社様の定期契約もご相談ください。</p>
+        <a href="#contact" class="btn btn-cta">空室クリーニングの料金を見る</a>
       </div>
     </div>
   </div>
@@ -554,6 +599,34 @@ footer nav a:hover{opacity:1;text-decoration:underline}
   </div>
 </section>
 
+<style>
+/* ===== お知らせ ===== */
+.news{background:var(--snow)}
+.news-list{max-width:840px;margin:0 auto;background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+.news-list a{display:flex;gap:24px;align-items:baseline;padding:22px 30px;border-bottom:1px solid var(--line);transition:background .15s}
+.news-list a:last-child{border-bottom:none}
+.news-list a:hover{background:var(--snow)}
+.news-list time{flex-shrink:0;font-size:14px;color:var(--gray);font-weight:500}
+.news-list .n-tag{flex-shrink:0;background:var(--accent-pale);color:var(--accent);font-size:12px;font-weight:700;border-radius:999px;padding:2px 12px}
+.news-list p{font-size:16px;line-height:1.7}
+@media(max-width:860px){.news-list a{flex-wrap:wrap;gap:8px 14px;padding:18px 20px}}
+</style>
+
+<!-- お知らせ（元サイトのニュース一覧に対応） -->
+<section class="news">
+  <div class="inner">
+    <span class="sec-label">NEWS</span>
+    <h2 class="sec-title">お知らせ</h2>
+    <div class="news-list reveal">
+      <a href="#"><time>2026.0◯.0◯</time><span class="n-tag">お知らせ</span><p>Google口コミ件数が◯◯◯件を突破しました。ありがとうございます。</p></a>
+      <a href="#"><time>2026.0◯.0◯</time><span class="n-tag">キャンペーン</span><p>期間限定キャンペーンを開始しました（◯月◯日まで）。</p></a>
+      <a href="#"><time>2026.0◯.0◯</time><span class="n-tag">メディア</span><p>公式YouTubeチャンネルで分解洗浄の作業動画を公開しています。</p></a>
+      <a href="#"><time>2026.0◯.0◯</time><span class="n-tag">お知らせ</span><p>◯◯区のキャッシュレス決済ポイント還元キャンペーン対象店舗になりました。</p></a>
+    </div>
+    <p class="area-note">※お知らせはダミーです。実際の更新情報に差し替えてください。</p>
+  </div>
+</section>
+
 <!-- §6-13 対応エリア -->
 <section class="area">
   <div class="inner">
@@ -565,7 +638,37 @@ footer nav a:hover{opacity:1;text-decoration:underline}
       <div class="area-card reveal"><h3>埼玉県</h3><p>さいたま市・川口市・所沢市・越谷市・草加市 ほか</p></div>
       <div class="area-card reveal"><h3>千葉県</h3><p>千葉市・市川市・船橋市・松戸市・柏市 ほか</p></div>
     </div>
-    <p class="area-note">上記以外の地域もお気軽にご相談ください。出張費はいただいておりません。</p>
+    <p class="area-note">上記エリア内は出張費無料。記載のない近隣エリアも出張料◯,◯◯◯円〜で対応可能です。お気軽にご相談ください。</p>
+  </div>
+</section>
+
+<style>
+/* ===== 注意事項 ===== */
+.notes{background:var(--snow);padding:72px 0}
+.notes-box{max-width:840px;margin:0 auto;background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:40px 44px}
+.notes-box h2{font-size:22px;font-weight:900;margin-bottom:20px;text-align:center}
+.notes-box ul{list-style:none}
+.notes-box li{font-size:15px;color:var(--gray);padding:10px 0 10px 26px;border-bottom:1px dashed var(--line);position:relative;line-height:1.8}
+.notes-box li:last-child{border-bottom:none}
+.notes-box li::before{content:"※";position:absolute;left:0;color:var(--accent);font-weight:700}
+.notes-box li b{color:var(--ink)}
+@media(max-width:860px){.notes-box{padding:28px 22px}}
+</style>
+
+<!-- 注意事項（元サイトの利用規約・キャンセルポリシーに対応） -->
+<section class="notes">
+  <div class="inner">
+    <div class="notes-box reveal">
+      <h2>ご利用にあたっての注意事項</h2>
+      <ul>
+        <li><b>キャンセル料：</b>ご予約日前日の17:00までのご連絡は無料です。それ以降のキャンセルは、作業料金の100%を申し受けます（日程変更は前日まで無料）。</li>
+        <li><b>再仕上げ保証：</b>仕上がりへのご指摘は作業完了後7日以内にご連絡ください。期間内であれば無料で再施工いたします。</li>
+        <li><b>エアコン：</b>製造から10年以上経過した機種は、部品劣化のリスクをご説明のうえ対応可否を判断いたします。</li>
+        <li><b>駐車スペース：</b>作業車1台分の駐車スペースのご用意をお願いしています（ご用意が難しい場合は近隣コインパーキングを利用します。料金は弊社負担です）。</li>
+        <li><b>作業範囲：</b>高所作業・特殊汚染（血液・動物の糞尿等）・遺品整理を伴う作業は、事前にご相談ください。</li>
+        <li>悪天候・災害時は、安全のため日程変更をお願いする場合があります。</li>
+      </ul>
+    </div>
   </div>
 </section>
 
