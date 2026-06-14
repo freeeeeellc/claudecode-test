@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>クリアベル｜エアコン・ハウスクリーニング 季節の感謝キャンペーン 最大69%OFF</title>
+<meta name="description" content="エアコン・水回りのハウスクリーニング。季節の感謝キャンペーンで最大69%OFF。1箇所から対応・出張費無料。東京・神奈川・埼玉・千葉対応。">
+<!-- lp11：デザイン=lp10（明朝×ネイビー×ゴールドの上質系）／コンテンツ構成=lp9（本家準拠）。数値はダミー -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1c2330;--ink-soft:#3a4252;--gray:#6b7280;
+  --gold:#b8945a;--gold-deep:#9c7b43;--gold-pale:#f3ecdf;
+  --cream:#faf7f1;--line:#e7e1d6;--white:#fff;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:"Noto Sans JP",sans-serif;color:var(--ink);background:var(--white);font-size:16px;line-height:1.9;letter-spacing:.02em}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.serif{font-family:"Noto Serif JP",serif}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+.img{width:100%;object-fit:cover;display:block;background:#efe9df}
+.img.r43{aspect-ratio:4/3}
+
+/* placeholder（決済・SNS等のブランド素材） */
+.ph{position:relative;width:100%;background:var(--cream);border:1px solid var(--line);
+  display:flex;align-items:center;justify-content:center;color:#a99c83;font-weight:700;font-size:12px;letter-spacing:.06em;text-align:center}
+.ph[data-label]::after{content:attr(data-label)}
+
+/* ===== 告知バー ===== */
+.topbar{background:var(--ink);color:rgba(255,255,255,.85);font-size:12px;letter-spacing:.04em}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;height:38px}
+.topbar .tagline{display:flex;align-items:center;gap:9px;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.topbar .tagline::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold);flex:none}
+.topbar .links{display:flex;gap:20px;flex:none}
+.topbar a:hover{color:#fff}
+
+/* ===== ヘッダー ===== */
+.header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.header .wrap{display:flex;align-items:center;gap:16px;height:74px}
+.brand{display:flex;flex-direction:column;line-height:1.15}
+.brand .name{font-weight:600;font-size:24px;letter-spacing:.06em}
+.brand small{font-size:10px;color:var(--gold);font-weight:700;letter-spacing:.2em}
+.header .spacer{flex:1}
+.header .tel{text-align:right;line-height:1.2}
+.header .tel .num{font-size:23px;font-weight:600;letter-spacing:.03em}
+.header .tel small{font-size:11px;color:var(--gray)}
+.header .cta{background:var(--gold);color:#fff;font-weight:700;padding:13px 28px;font-size:14.5px;white-space:nowrap;border-radius:2px;
+  box-shadow:0 6px 18px rgba(184,148,90,.3);transition:background .2s,transform .15s}
+.header .cta:hover{background:var(--gold-deep);transform:translateY(-1px)}
+.menu-btn{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px;flex:none}
+.menu-btn span{display:block;width:25px;height:2px;background:var(--ink);transition:.25s}
+.menu-btn.active span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.menu-btn.active span:nth-child(2){opacity:0}
+.menu-btn.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* ===== グローバルメニュー ===== */
+.gnav{background:var(--ink);position:sticky;top:74px;z-index:99}
+.gnav ul{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;max-width:1120px;margin:0 auto}
+.gnav>ul>li{position:relative}
+.gnav>ul>li>a{display:flex;align-items:center;color:rgba(255,255,255,.92);font-weight:500;font-size:13.5px;padding:15px 18px;white-space:nowrap;position:relative;letter-spacing:.04em;transition:color .15s}
+.gnav>ul>li>a::after{content:"";position:absolute;left:18px;right:18px;bottom:9px;height:1px;background:var(--gold);transform:scaleX(0);transition:transform .25s}
+.gnav>ul>li:hover>a{color:#fff}
+.gnav>ul>li:hover>a::after{transform:scaleX(1)}
+.gnav .caret{margin-left:6px;font-size:8px;opacity:.8;transition:transform .2s}
+.gnav .has-sub:hover>a .caret{transform:rotate(180deg)}
+.gnav .badge>a{border:1px solid var(--gold);color:var(--gold-pale);margin:7px 10px;padding:7px 16px;font-weight:700}
+.gnav .badge>a::after{display:none}
+.gnav .badge:hover>a{background:var(--gold);color:var(--ink)}
+.submenu{position:absolute;top:100%;left:0;min-width:230px;background:#fff;box-shadow:0 18px 40px rgba(28,35,48,.16);overflow:hidden;
+  display:none;flex-direction:column;padding:8px 0;z-index:120;border-bottom:2px solid var(--gold)}
+.gnav .has-sub:hover .submenu{display:flex}
+.submenu a{color:var(--ink-soft);font-size:13.5px;font-weight:500;padding:11px 22px;border-left:2px solid transparent;transition:.12s}
+.submenu a:hover{background:var(--cream);color:var(--gold-deep);border-left-color:var(--gold)}
+
+/* ===== ヒーロー ===== */
+.hero{position:relative;min-height:78vh;display:flex;align-items:center;color:#fff;
+  background:linear-gradient(100deg,rgba(20,26,38,.82) 0%,rgba(20,26,38,.5) 58%,rgba(20,26,38,.28) 100%),url("https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1700&q=80") center/cover}
+.hero-in{max-width:1120px;margin:0 auto;padding:64px 22px;width:100%}
+.hero .eyebrow{font-size:12.5px;letter-spacing:.3em;color:var(--gold-pale);font-weight:700;margin-bottom:22px}
+.hero .eyebrow::before{content:"";display:inline-block;width:38px;height:1px;background:var(--gold);vertical-align:middle;margin-right:15px}
+.hero h1{font-size:clamp(30px,5vw,54px);font-weight:600;line-height:1.5;margin-bottom:18px;letter-spacing:.04em}
+.hero h1 .gold{color:#e3c896}
+.hero .off-line{font-size:clamp(17px,2.4vw,22px);font-weight:600;margin-bottom:30px;letter-spacing:.04em}
+.hero .off-line b{font-family:"Noto Serif JP",serif;font-size:1.7em;color:#e3c896;vertical-align:-2px;margin:0 .1em}
+.hero .hero-cta{display:flex;gap:15px;flex-wrap:wrap;align-items:center}
+.hero .btn-gold{background:var(--gold);color:#fff;font-weight:700;padding:16px 38px;border-radius:2px;font-size:15.5px;box-shadow:0 8px 22px rgba(184,148,90,.34);transition:background .2s,transform .15s}
+.hero .btn-gold:hover{background:var(--gold-deep);transform:translateY(-2px)}
+.hero .btn-ghost{border:1px solid rgba(255,255,255,.6);color:#fff;padding:15px 34px;border-radius:2px;font-size:15px}
+.hero .btn-ghost:hover{background:rgba(255,255,255,.1)}
+.hero .note{font-size:11px;color:rgba(255,255,255,.6);margin-top:18px}
+
+/* ===== 信頼バー ===== */
+.trust{background:var(--cream);border-bottom:1px solid var(--line)}
+.trust .wrap{display:flex;flex-wrap:wrap;justify-content:center;gap:0}
+.trust .chip{flex:1;min-width:160px;text-align:center;padding:26px 16px;border-right:1px solid var(--line)}
+.trust .chip:last-child{border-right:none}
+.trust .chip .big{font-family:"Noto Serif JP",serif;font-size:30px;font-weight:600;color:var(--gold-deep);line-height:1}
+.trust .chip small{display:block;color:var(--gray);font-size:12px;margin-top:8px;letter-spacing:.06em}
+
+/* ===== セクション共通 ===== */
+section{padding:88px 0}
+section.alt{background:var(--cream)}
+.sec-head{text-align:center;margin-bottom:52px}
+.sec-head .en{display:block;color:var(--gold-deep);font-weight:700;letter-spacing:.3em;font-size:12.5px}
+.sec-head h2{font-size:clamp(26px,3.6vw,38px);font-weight:600;margin-top:14px;letter-spacing:.04em}
+.sec-head p{color:var(--gray);margin-top:10px;font-size:14.5px}
+
+/* ===== サービス10種 ===== */
+.plan-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(232px,1fr));gap:24px}
+.plan{background:#fff;border:1px solid var(--line);overflow:hidden;display:flex;flex-direction:column;transition:box-shadow .25s,transform .2s}
+.plan:hover{box-shadow:0 16px 40px rgba(28,35,48,.1);transform:translateY(-4px)}
+.plan .body{padding:20px 20px 22px;display:flex;flex-direction:column;flex:1}
+.plan h3{font-size:18px;font-weight:600;margin-bottom:12px;letter-spacing:.03em}
+.plan .price{margin-top:auto}
+.plan .old{color:var(--gray);text-decoration:line-through;text-decoration-color:var(--gold);font-size:13px}
+.plan .now{font-family:"Noto Serif JP",serif;color:var(--ink);font-weight:600;font-size:28px;line-height:1.2;margin-top:2px}
+.plan .now small{font-size:13px;color:var(--gray);font-family:"Noto Sans JP",sans-serif}
+.plan .off{display:inline-block;border:1px solid var(--gold);color:var(--gold-deep);font-weight:700;font-size:11.5px;padding:1px 9px;margin-left:8px;vertical-align:3px;letter-spacing:.04em}
+.plan .more{display:block;text-align:center;margin-top:16px;border:1px solid var(--ink);color:var(--ink);font-weight:700;padding:11px;font-size:13.5px;transition:.2s}
+.plan .more:hover{background:var(--ink);color:#fff}
+
+/* ===== パック ===== */
+.pack-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(224px,1fr));gap:24px}
+.pack{background:#fff;border:1px solid var(--line);padding:30px 24px;text-align:center;position:relative;transition:box-shadow .25s,transform .2s}
+.pack:hover{box-shadow:0 16px 40px rgba(28,35,48,.1);transform:translateY(-4px)}
+.pack.popular{border:1px solid var(--gold);background:linear-gradient(180deg,#fffdf9,#fff)}
+.pack.popular::before{content:"人気No.1";position:absolute;top:0;left:50%;transform:translate(-50%,-50%);
+  background:var(--gold);color:#fff;font-weight:700;font-size:12px;padding:5px 20px;letter-spacing:.1em}
+.pack h3{font-size:19px;font-weight:600;margin-bottom:6px;letter-spacing:.03em}
+.pack .time{color:var(--gray);font-size:13px}
+.pack .img{margin:18px 0}
+.pack .now{font-family:"Noto Serif JP",serif;color:var(--ink);font-weight:600;font-size:30px}
+.pack .now small{font-size:13px;color:var(--gray);font-family:"Noto Sans JP",sans-serif}
+.pack .step-no{font-family:"Noto Serif JP",serif;font-size:40px;color:var(--gold);font-weight:600;line-height:1}
+
+/* 空室バナー */
+.vacant{margin-top:34px;background:var(--ink);color:#fff;overflow:hidden;display:grid;grid-template-columns:1fr 1fr}
+.vacant .img{height:100%;min-height:240px}
+.vacant .txt{padding:44px 42px;display:flex;flex-direction:column;justify-content:center}
+.vacant .txt .en{color:var(--gold-pale);font-size:12px;letter-spacing:.26em;font-weight:700;margin-bottom:10px}
+.vacant .txt h3{font-size:26px;font-weight:600;margin-bottom:14px;letter-spacing:.04em}
+.vacant .txt p{font-size:14px;color:rgba(255,255,255,.78)}
+.vacant .txt .btn{display:inline-block;align-self:flex-start;margin-top:22px;background:var(--gold);color:#fff;font-weight:700;padding:13px 30px;border-radius:2px;transition:background .2s}
+.vacant .txt .btn:hover{background:var(--gold-deep)}
+
+/* ===== お知らせ ===== */
+.news-list{max-width:840px;margin:0 auto;border-top:1px solid var(--line)}
+.news-list li{list-style:none;display:flex;gap:18px;align-items:center;padding:18px 4px;border-bottom:1px solid var(--line)}
+.news-list .date{color:var(--gray);font-size:13px;width:100px;flex-shrink:0;font-family:"Noto Serif JP",serif}
+.news-list .tag{border:1px solid var(--gold);color:var(--gold-deep);font-size:11px;font-weight:700;padding:2px 12px;flex-shrink:0;letter-spacing:.04em}
+.news-list .ttl{font-size:14.5px}
+.center-link{text-align:center;margin-top:36px}
+.center-link a{display:inline-block;border:1px solid var(--ink);color:var(--ink);font-weight:700;padding:13px 40px;transition:.2s}
+.center-link a:hover{background:var(--ink);color:#fff}
+
+/* ===== エリア ===== */
+.area-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px}
+.area-card{background:#fff;border:1px solid var(--line);padding:28px}
+.area-card h3{font-family:"Noto Serif JP",serif;color:var(--ink);font-weight:600;font-size:21px;border-bottom:1px solid var(--gold);padding-bottom:12px;margin-bottom:14px;letter-spacing:.04em}
+.area-card p{font-size:13.5px;color:var(--gray)}
+.area-note{text-align:center;margin-top:34px;background:var(--gold-pale);border:1px solid var(--line);padding:22px;font-weight:600;color:var(--gold-deep);letter-spacing:.03em}
+
+/* ===== 決済 ===== */
+.paylogos{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+.paylogos .ph{width:88px;height:52px;font-size:11px}
+
+/* ===== 注意事項 ===== */
+.notes{max-width:880px;margin:0 auto;background:#fff;border:1px solid var(--line);padding:36px 40px}
+.notes ol{padding-left:1.4em}
+.notes li{margin-bottom:13px;font-size:14px;color:var(--ink-soft)}
+.notes li::marker{color:var(--gold);font-family:"Noto Serif JP",serif}
+
+/* ===== お問い合わせ ===== */
+.contact-block{text-align:center}
+.contact-block .tel-big{font-family:"Noto Serif JP",serif;font-size:clamp(34px,5.4vw,50px);color:var(--ink);font-weight:600;line-height:1.3;letter-spacing:.04em}
+.contact-block small{color:var(--gray);font-size:14px}
+.contact-block .row{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:28px}
+.contact-block .btn-gold{background:var(--gold);color:#fff;font-weight:700;padding:16px 40px;border-radius:2px;box-shadow:0 8px 22px rgba(184,148,90,.3);transition:background .2s}
+.contact-block .btn-gold:hover{background:var(--gold-deep)}
+.contact-block .btn-line{background:#06c755;color:#fff;font-weight:700;padding:16px 40px;border-radius:2px}
+
+/* ===== フッター ===== */
+.footer{background:#12161f;color:rgba(255,255,255,.72);padding:56px 0 0}
+.footer .cols{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:34px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.12)}
+.footer .f-logo{font-family:"Noto Serif JP",serif;font-size:22px;font-weight:600;color:#fff;letter-spacing:.06em;margin-bottom:12px}
+.footer h4{color:#fff;font-weight:600;font-size:15px;margin-bottom:16px;letter-spacing:.06em}
+.footer ul{list-style:none}
+.footer li{margin-bottom:10px;font-size:13.5px}
+.footer a:hover{color:var(--gold-pale)}
+.footer .ftel .num{font-family:"Noto Serif JP",serif;color:#fff;font-size:26px;font-weight:600}
+.copyright{text-align:center;padding:22px;font-size:11.5px;color:#6b7480;letter-spacing:.03em}
+.pagetop{position:fixed;right:22px;bottom:150px;background:var(--ink);color:#fff;width:46px;height:46px;
+  display:flex;align-items:center;justify-content:center;font-weight:700;z-index:90;box-shadow:0 8px 20px rgba(28,35,48,.24)}
+
+/* PC右下フロート */
+.float-cta{position:fixed;right:22px;bottom:22px;z-index:96;display:flex;flex-direction:column;gap:10px}
+.float-cta a{display:flex;align-items:center;gap:9px;padding:14px 24px;font-weight:700;font-size:14.5px;border-radius:2px;
+  box-shadow:0 8px 22px rgba(28,35,48,.2);transition:transform .15s}
+.float-cta a svg{width:17px;height:17px;flex:none}
+.float-cta a:hover{transform:translateY(-2px)}
+.float-cta .tel{background:#fff;color:var(--ink);border:1px solid var(--ink)}
+.float-cta .est{background:var(--gold);color:#fff}
+
+/* SP固定CTA */
+.sp-cta{display:none;position:fixed;bottom:0;left:0;right:0;z-index:95;background:rgba(255,255,255,.97);border-top:1px solid var(--line);padding:9px 10px;gap:10px;box-shadow:0 -4px 16px rgba(0,0,0,.06)}
+.sp-cta a{flex:1;text-align:center;font-weight:700;padding:13px;border-radius:2px;font-size:14px}
+.sp-cta .tel{border:1px solid var(--ink);color:var(--ink)}
+.sp-cta .form{background:var(--gold);color:#fff}
+
+@media(max-width:920px){
+  section{padding:60px 0}
+  .topbar .links{display:none}
+  .header .wrap{height:62px;gap:10px}
+  .header .tel,.header .cta{display:none}
+  .menu-btn{display:flex}
+  .brand .name{font-size:20px}
+  .gnav{top:62px;max-height:calc(100vh - 62px);overflow-y:auto}
+  .gnav ul{display:none;flex-direction:column}
+  .gnav.open ul{display:flex}
+  .gnav>ul>li{position:static;border-bottom:1px solid rgba(255,255,255,.12)}
+  .gnav>ul>li>a{padding:15px 22px;font-size:15px;justify-content:space-between}
+  .gnav>ul>li>a::after{display:none}
+  .gnav .caret{font-size:11px;opacity:1}
+  .gnav .badge>a{margin:10px 18px;justify-content:center;padding:13px}
+  .submenu{position:static;box-shadow:none;background:rgba(255,255,255,.06);padding:4px 0;border-bottom:none}
+  .submenu a{color:rgba(255,255,255,.85);padding:12px 38px;border-left:none}
+  .submenu a:hover{background:rgba(255,255,255,.08);color:#fff;border-left:none}
+  .hero{min-height:auto;padding:0}
+  .trust .chip{flex:1 1 50%;border-bottom:1px solid var(--line)}
+  .trust .chip:nth-child(2n){border-right:none}
+  .vacant{grid-template-columns:1fr}
+  .footer .cols{grid-template-columns:1fr}
+  .float-cta{display:none}
+  .sp-cta{display:flex}
+  .pagetop{bottom:80px;right:18px}
+  body{padding-bottom:66px}
+}
+</style>
+</head>
+<body>
+
+<!-- 告知バー -->
+<div class="topbar">
+  <div class="wrap">
+    <span class="tagline">東京・神奈川・埼玉・千葉のエアコン掃除／ハウスクリーニング</span>
+    <span class="links">
+      <a href="#faq">よくある質問</a>
+      <a href="#company">運営会社</a>
+      <a href="#contact">お問い合わせ</a>
+    </span>
+  </div>
+</div>
+
+<!-- ヘッダー -->
+<header class="header">
+  <div class="wrap">
+    <a class="brand" href="#top">
+      <span class="name serif">Clearbell</span>
+      <small>HOUSE CLEANING</small>
+    </a>
+    <div class="spacer"></div>
+    <div class="tel">
+      <div class="num serif">0120-000-000</div>
+      <small>受付 9:00〜18:00／年中無休</small>
+    </div>
+    <a class="cta" href="#contact">無料お見積り</a>
+    <button class="menu-btn" id="menuBtn" aria-label="メニューを開く"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- グローバルメニュー（15項目・ドロップダウン付き） -->
+<nav class="gnav" id="gnav">
+  <ul>
+    <li class="has-sub">
+      <a href="#plans">エアコンクリーニング<span class="caret">▾</span></a>
+      <div class="submenu">
+        <a href="#plans">エアコン（壁掛けタイプ）</a>
+        <a href="#plans">埋め込み型エアコン</a>
+      </div>
+    </li>
+    <li class="has-sub">
+      <a href="#plans">ハウスクリーニング<span class="caret">▾</span></a>
+      <div class="submenu">
+        <a href="#plans">レンジフード</a>
+        <a href="#plans">キッチン</a>
+        <a href="#plans">浴室</a>
+        <a href="#plans">追い焚き配管</a>
+        <a href="#plans">トイレ</a>
+        <a href="#plans">空室クリーニング</a>
+        <a href="#plans">洗面台</a>
+        <a href="#plans">洗濯機</a>
+        <a href="#plans">フロア</a>
+        <a href="#plans">窓・サッシなど</a>
+        <a href="#plans">ベランダ・バルコニー</a>
+      </div>
+    </li>
+    <li><a href="#packs">パックプラン</a></li>
+    <li><a href="#plans">不用品回収</a></li>
+    <li><a href="#plans">害虫・害獣駆除</a></li>
+    <li><a href="#area">対応エリア</a></li>
+    <li><a href="#news">豆知識</a></li>
+    <li><a href="#contact">お問い合わせ</a></li>
+    <li class="badge"><a href="#contact">加盟店募集中</a></li>
+  </ul>
+</nav>
+
+<!-- ヒーロー -->
+<div class="hero" id="top">
+  <div class="hero-in">
+    <p class="eyebrow">SEASONAL THANKS CAMPAIGN</p>
+    <h1 class="serif">プロのおそうじで、<br><span class="gold">「あの頃のきれい」</span>を取り戻す。</h1>
+    <p class="off-line">期間限定の感謝価格　全メニュー最大<b>69</b>%OFF　<span style="font-size:.7em;opacity:.85">／ ◯月◯日まで・1,500件突破記念</span></p>
+    <div class="hero-cta">
+      <a href="#plans" class="btn-gold">料金を見る</a>
+      <a href="#contact" class="btn-ghost">無料で見積もる</a>
+    </div>
+    <p class="note">※実績数値・割引率はダミーです。公開前に実数へ差し替えてください（景品表示法）。</p>
+  </div>
+</div>
+
+<!-- 信頼バー -->
+<div class="trust">
+  <div class="wrap">
+    <div class="chip"><span class="big">★4.7</span><small>クチコミ評価 ※</small></div>
+    <div class="chip"><span class="big">1,500+</span><small>Google クチコミ件数 ※</small></div>
+    <div class="chip"><span class="big">50万件</span><small>累計作業実績 ※</small></div>
+    <div class="chip"><span class="big">加入済</span><small>損害賠償保険</small></div>
+  </div>
+</div>
+
+<!-- おそうじプラン10種 -->
+<section id="plans">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="en">CLEANING PLAN</span>
+      <h2 class="serif">おそうじプランのご紹介</h2>
+      <p>1箇所から対応します。表示はすべて税込・出張費込みです。</p>
+    </div>
+    <div class="plan-grid">
+      <div class="plan"><img class="img r43" src="https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?auto=format&fit=crop&w=600&q=80" alt="エアコン"><div class="body"><h3>エアコン（壁掛け）</h3><div class="price"><span class="old">通常 ¥19,350</span><div class="now">¥9,800<small>〜(税込)</small><span class="off">49%OFF</span></div></div><a class="more" href="#contact">詳しくはこちら</a></div></div>
+      <div class="plan"><img class="img r43" src="https://images.unsplash.com/photo-1563453392212-326f5e854473?auto=format&fit=crop&w=600&q=80" alt="埋め込み型エアコン"><div class="body"><h3>埋め込み型エアコン</h3><div class="price"><span class="old">通常 ¥29,980</span><div class="now">¥18,000<small>〜(税込)</small><span class="off">40%OFF</span></div></div><a class="more" href="#contact">詳しくはこちら</a></div></div>
+      <div class="plan"><img class="img r43" src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=600&q=80" alt="レンジフード"><div class="body"><h3>レンジフード</h3><div class="price"><span class="old">通常 ¥29,800</span><div class="now">¥16,000<small>〜(税込)</small><span class="off">46%OFF</span></div></div><a class="more" href="#contact">詳しくはこちら</a></div></div>
+      <div class="plan"><img class="img r43" src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=600&q=80" alt="キッチン"><div class="body"><h3>キッチン</h3><div class="price"><span class="old">通常 ¥29,800</span><div class="now">¥17,000<small>〜(税込)</small><span class="off">43%OFF</span></div></div><a class="more" href="#contact">詳しくはこちら</a></div></div>
+      <div class="plan"><img class="img r43" src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80" alt="浴室"><div class="body"><h3>浴室</h3><div class="price"><span class="old">通常 ¥31,630</span><div class="now">¥18,000<small>〜(税込)</small><span class="off">43%OFF</span></div></div><a class="more" href="#contact">詳しくはこちら</a></div></div>
+      <div class="plan"><img class="img r43" src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=600&q=80" alt="トイレ"><div class="body"><h3>トイレ</h3><div class="price"><span class="old">通常 ¥27,500</span><div class="now">¥11,000<small>〜(税込)</small><span class="off">60%OFF</span></div></div><a class="more" href="#contact">詳しくはこちら</a></div></div>
+      <div class="plan"><img class="img r43" src="https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=600&q=80" alt="洗面台"><div class="body"><h3>洗面台</h3><div class="price"><span class="old">通常 ¥27,500</span><div class="now">¥11,000<small>〜(税込)</small><span class="off">60%OFF</span></div></div><a class="more" href="#contact">詳しくはこちら</a></div></div>
+      <div class="plan"><img class="img r43" src="https://images.unsplash.com/photo-1595846519845-68e298c2edd8?auto=format&fit=crop&w=600&q=80" alt="フロア"><div class="body"><h3>フロア</h3><div class="price"><span class="old">通常 ¥39,600〜</span><div class="now">¥22,400<small>〜(税込)</small><span class="off">43%OFF</span></div></div><a class="more" href="#contact">詳しくはこちら</a></div></div>
+      <div class="plan"><img class="img r43" src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=600&q=80" alt="窓・サッシ・雨戸"><div class="body"><h3>窓・サッシ・雨戸</h3><div class="price"><span class="old">通常 ¥29,800</span><div class="now">¥12,000<small>〜(税込)</small><span class="off">59%OFF</span></div></div><a class="more" href="#contact">詳しくはこちら</a></div></div>
+      <div class="plan"><img class="img r43" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" alt="ベランダ・バルコニー"><div class="body"><h3>ベランダ・バルコニー</h3><div class="price"><span class="old">通常 ¥29,700</span><div class="now">¥17,000<small>〜(税込)</small><span class="off">42%OFF</span></div></div><a class="more" href="#contact">詳しくはこちら</a></div></div>
+    </div>
+    <p style="text-align:center;font-size:12.5px;color:var(--gray);margin-top:26px">※価格・割引率はダミーです。二重価格表示は通常価格での販売実績が必要です（景品表示法）。実数へ差し替えてください。</p>
+  </div>
+</section>
+
+<!-- パックプラン -->
+<section class="alt" id="packs">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="en">PACKAGE PLAN</span>
+      <h2 class="serif">パックプランなら、もっとお得に。</h2>
+      <p>時間内なら場所の組み合わせは自由。最大 48%OFF。</p>
+    </div>
+    <div class="pack-grid">
+      <div class="pack"><h3 class="serif">ちょこっとプラン</h3><div class="time">作業時間 1時間</div><img class="img r43" src="https://images.unsplash.com/photo-1563453392212-326f5e854473?auto=format&fit=crop&w=500&q=80" alt="ちょこっとプラン"><div class="now">¥9,900<small>(税込)</small></div></div>
+      <div class="pack"><h3 class="serif">激トク3時間パック</h3><div class="time">作業時間 3時間</div><img class="img r43" src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=500&q=80" alt="3時間パック"><div class="now">¥27,390<small>(税込)</small></div></div>
+      <div class="pack popular"><h3 class="serif">激トク4時間パック</h3><div class="time">作業時間 4時間</div><img class="img r43" src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=500&q=80" alt="4時間パック"><div class="now">¥34,980<small>(税込)</small></div></div>
+      <div class="pack"><h3 class="serif">激トク6時間パック</h3><div class="time">作業時間 6時間</div><img class="img r43" src="https://images.unsplash.com/photo-1595846519845-68e298c2edd8?auto=format&fit=crop&w=500&q=80" alt="6時間パック"><div class="now">¥52,140<small>(税込)</small></div></div>
+    </div>
+
+    <!-- 空室クリーニングバナー -->
+    <div class="vacant">
+      <img class="img" src="https://images.unsplash.com/photo-1592928302636-c83cf1e1c887?auto=format&fit=crop&w=900&q=80" alt="空室クリーニング">
+      <div class="txt">
+        <span class="en">VACANT ROOM</span>
+        <h3 class="serif">空室クリーニング</h3>
+        <p>退去後のお部屋まるごとクリーニング。間取り・状態に合わせてお見積りいたします。原状回復・売却前の清掃にも対応。</p>
+        <a class="btn" href="#contact">空室クリーニングの相談をする</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- お知らせ -->
+<section id="news">
+  <div class="wrap">
+    <div class="sec-head"><span class="en">NEWS</span><h2 class="serif">お知らせ</h2></div>
+    <ul class="news-list">
+      <li><span class="date">2026.06.11</span><span class="tag">お知らせ</span><span class="ttl">お知らせ見出しテキスト（あとで差し替え）</span></li>
+      <li><span class="date">2026.05.28</span><span class="tag">動画</span><span class="ttl">YouTube動画を公開しました（あとで差し替え）</span></li>
+      <li><span class="date">2026.05.27</span><span class="tag">キャンペーン</span><span class="ttl">キャッシュレスキャンペーン参加のお知らせ（あとで差し替え）</span></li>
+      <li><span class="date">2026.05.15</span><span class="tag">メディア</span><span class="ttl">メディア掲載のお知らせ（あとで差し替え）</span></li>
+      <li><span class="date">2026.05.13</span><span class="tag">実績</span><span class="ttl">Googleクチコミ1,500件突破のお知らせ（あとで差し替え）</span></li>
+    </ul>
+    <div class="center-link"><a href="#news">お知らせ一覧はこちら</a></div>
+  </div>
+</section>
+
+<!-- ご依頼の流れ -->
+<section class="alt" id="flow">
+  <div class="wrap">
+    <div class="sec-head"><span class="en">FLOW</span><h2 class="serif">ご依頼の流れ</h2></div>
+    <div class="pack-grid">
+      <div class="pack"><div class="step-no">1</div><h3 class="serif" style="margin-top:10px">お問い合わせ</h3><p class="time">お電話・フォームから</p></div>
+      <div class="pack"><div class="step-no">2</div><h3 class="serif" style="margin-top:10px">お見積り・ご予約</h3><p class="time">無料でお見積り</p></div>
+      <div class="pack"><div class="step-no">3</div><h3 class="serif" style="margin-top:10px">作業当日</h3><p class="time">プロが丁寧に作業</p></div>
+      <div class="pack"><div class="step-no">4</div><h3 class="serif" style="margin-top:10px">お支払い・完了</h3><p class="time">各種決済に対応</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 対応エリア -->
+<section id="area">
+  <div class="wrap">
+    <div class="sec-head"><span class="en">CORRESPONDING AREA</span><h2 class="serif">対応エリア</h2><p>対象エリア内であれば無料でお伺いします。</p></div>
+    <div class="area-grid">
+      <div class="area-card"><h3>東京都</h3><p>23区全域、および多摩地域の各市町村に対応。（あとで市区町村名を差し替え）</p></div>
+      <div class="area-card"><h3>埼玉県</h3><p>さいたま市全域、および県内各市町村に対応。（あとで市区町村名を差し替え）</p></div>
+      <div class="area-card"><h3>神奈川県</h3><p>横浜市・川崎市、および県内各市町村に対応。（あとで市区町村名を差し替え）</p></div>
+      <div class="area-card"><h3>千葉県</h3><p>千葉市、および県内各市町村に対応。（あとで市区町村名を差し替え）</p></div>
+    </div>
+    <div class="area-note">近隣エリアの方もご相談ください。上記エリア外の方も出張料金（3,000円〜）にて承ります。</div>
+  </div>
+</section>
+
+<!-- 決済方法 -->
+<section class="alt">
+  <div class="wrap">
+    <div class="sec-head"><span class="en">PAYMENT</span><h2 class="serif">各種お支払いに対応</h2></div>
+    <div class="paylogos">
+      <span class="ph" data-label="VISA"></span>
+      <span class="ph" data-label="Master"></span>
+      <span class="ph" data-label="JCB"></span>
+      <span class="ph" data-label="AMEX"></span>
+      <span class="ph" data-label="Diners"></span>
+      <span class="ph" data-label="PayPay"></span>
+      <span class="ph" data-label="楽天Pay"></span>
+      <span class="ph" data-label="d払い"></span>
+      <span class="ph" data-label="交通系IC"></span>
+      <span class="ph" data-label="現金"></span>
+    </div>
+  </div>
+</section>
+
+<!-- 注意事項 -->
+<section id="notes">
+  <div class="wrap">
+    <div class="sec-head"><span class="en">NOTES</span><h2 class="serif">注意事項</h2></div>
+    <div class="notes">
+      <ol>
+        <li>作業には水道・電気をご利用させていただきます。あらかじめご了承ください。（本文はあとで差し替え）</li>
+        <li>作業スペースの確保にご協力をお願いいたします。（本文はあとで差し替え）</li>
+        <li>取り外しできない設備・部品は対応できない場合があります。（本文はあとで差し替え）</li>
+        <li>専門洗浄により塗装・コーティングに影響が出る場合があります。（本文はあとで差し替え）</li>
+        <li>素材・経年劣化によりシミ・汚れが落ちきらない場合があります。（本文はあとで差し替え）</li>
+        <li>製造から一定年数を経過した機器はお断りする場合があります。（本文はあとで差し替え）</li>
+        <li>作業後のお申し出は◯週間以内にお願いいたします。（本文はあとで差し替え）</li>
+        <li>領収書の再発行には手数料を申し受けます。（本文はあとで差し替え）</li>
+        <li>キャンセルポリシーについて（前日◯時まで無料／以降は規定の料金）。（本文はあとで差し替え）</li>
+        <li>その他、詳細は担当スタッフへご確認ください。（本文はあとで差し替え）</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- お問い合わせ -->
+<section class="alt" id="contact">
+  <div class="wrap contact-block">
+    <div class="sec-head"><span class="en">CONTACT</span><h2 class="serif">お問い合わせ・無料お見積り</h2><p>お電話・LINE・フォームよりお気軽にどうぞ。</p></div>
+    <div class="tel-big serif">0120-000-000</div>
+    <small>受付 9:00〜18:00／年中無休</small>
+    <div class="row">
+      <a href="#" class="btn-line">LINEで相談する</a>
+      <a href="#" class="btn-gold">お問い合わせフォームへ</a>
+    </div>
+  </div>
+</section>
+
+<!-- フッター -->
+<footer class="footer" id="company">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <div class="f-logo">Clearbell</div>
+        <p style="font-size:13px">東京のエアコン掃除・ハウスクリーニング<br>運営会社情報（あとで差し替え）</p>
+      </div>
+      <div>
+        <h4>メニュー</h4>
+        <ul>
+          <li><a href="#news">お知らせ</a></li>
+          <li><a href="#faq">よくある質問</a></li>
+          <li><a href="#contact">法人のお客様</a></li>
+          <li><a href="#contact">加盟店募集中</a></li>
+          <li><a href="#company">プライバシーポリシー</a></li>
+          <li><a href="#company">運営会社</a></li>
+        </ul>
+      </div>
+      <div class="ftel">
+        <h4>お問い合わせ</h4>
+        <div class="num">0120-000-000</div>
+        <p style="font-size:13px">受付 9:00〜18:00／年中無休</p>
+        <p style="font-size:13px;margin-top:8px"><a href="#contact">お問い合わせフォーム ＞</a></p>
+      </div>
+    </div>
+  </div>
+  <div class="copyright">© 2026 Clearbell House Cleaning.／デザイン=lp10・構成=lp9／写真：Unsplash・価格・実績はダミー</div>
+</footer>
+
+<a class="pagetop" href="#top">▲</a>
+
+<!-- PC右下フロート -->
+<div class="float-cta">
+  <a class="tel" href="tel:0120000000"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.3 1.1l-2.1 2.1Z"/></svg>お電話</a>
+  <a class="est" href="#contact"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 3h7l5 5v12a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Zm6 1.5V8h3.5L13 4.5ZM9 12h7v1.6H9V12Zm0 3.2h7v1.6H9v-1.6Z"/></svg>無料見積り</a>
+</div>
+
+<!-- SP固定CTA -->
+<div class="sp-cta">
+  <a class="tel" href="tel:0120000000">電話する</a>
+  <a class="form" href="#contact">無料見積り</a>
+</div>
+
+<div id="faq"></div>
+
+<script>
+  var mb=document.getElementById('menuBtn'),gn=document.getElementById('gnav');
+  mb.addEventListener('click',function(){gn.classList.toggle('open');mb.classList.toggle('active');});
+  gn.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click',function(){if(window.innerWidth<=920){gn.classList.remove('open');mb.classList.remove('active');}});
+  });
+</script>
+</body>
+</html>
